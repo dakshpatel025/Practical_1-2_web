@@ -1,0 +1,25 @@
+#title{
+    font-size: 50px;
+    text-align: center;
+    margin-top: 25px;
+    text-decoration: underline;
+}
+
+#first_box{
+    border: 2px;
+    border-color: black;
+    border-style: solid;
+    height: 150px;
+    margin-top: 20px;
+}
+
+#first_box_title{
+    margin-left: 20px;
+    font-size: 22px;
+    margin-top: 10px;
+}
+
+.name{
+    display: inline-block;
+    margin-left: 15px;
+}

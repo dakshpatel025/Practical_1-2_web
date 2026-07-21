@@ -1,0 +1,17 @@
+#title{
+    text-align: center;
+    font-size: 50px;
+    text-decoration: underline;
+    margin-top: 35px;
+}
+
+#table{
+    height: 450px;
+    width: 750px;
+    border: 3px;
+    border-color: black;
+    border-style: solid;
+    margin-left: 550px;
+    margin-top: 150px;
+    text-align: center;
+}
