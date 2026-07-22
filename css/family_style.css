@@ -36,3 +36,14 @@
     height: 50px;
     margin-top: 50px;
 }
+
+.fot{
+    text-align: center;
+    background-color: black;
+    height: 25px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 35px;
+}

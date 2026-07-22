@@ -12,8 +12,25 @@
     border-color: black;
     margin-top: 20px;
     text-align: center;
-    margin-left: 710px;
-    margin-top: 100px;
+    /* margin-left: 710px;
+    margin-top: 100px; */
     height: 200px;
     width: 500px;
+}
+
+.fot{
+    text-align: center;
+    background-color: black;
+    height: 25px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 35px;
+}
+
+#adjust{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
