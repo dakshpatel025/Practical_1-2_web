@@ -6,17 +6,18 @@
 }
 
 #border{
-    border: 3px;
+    border: 0px;
     border-style: solid;
     border-color: black;
-    height: 500px;
-    width: 750px;
+    height: 450px;
+    width: 800px;
 }
 
 #adjust{
     align-items: center;
     display: flex;
     justify-content: center;
+    margin-top: 15px;
 }
 
 #dates{
@@ -54,4 +55,30 @@
     align-items: center;
     display: flex;
     justify-content: center;
+}
+
+.commen-table {
+  width: 100%;
+  border-collapse: collapse; /* Merges borders into single lines */
+  margin: 20px 0;
+  font-family: sans-serif;
+  
+  /* Adds the outer shadow around the table */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); 
+}
+
+/* Styles for both headers and cells */
+.commen-table th, 
+.commen-table td {
+  padding: 12px 15px;
+  text-align: left;
+  
+  /* Creates the inside lines between columns and rows */
+  border: 1px solid #dddddd; 
+}
+
+/* Optional: Adds a distinct background to the table header */
+.commen-table thead tr {
+  background-color: #f4f4f4;
+  color: #333333;
 }

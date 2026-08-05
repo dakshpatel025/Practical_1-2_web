@@ -1,21 +1,25 @@
-/* body{
-    width: 100%;
-    height: 100vh;
-} */
+body{
+    background-color: #F1F5F9;
+}
 
 #text{
     font-size: 60px;
     text-align: center;
     text-decoration: underline;
-    background-color: rgb(107, 151, 222);
+    background-color: #10115d;
     height: 100px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
+#space{
+    height: 7px;
+    background-color: aliceblue;
+}
+
 #nav{
-    background-color: #36454F;
+    background-color: #03398a;
     color: white;
     margin-bottom: 30px;
     align-items: center;
@@ -30,10 +34,11 @@
     justify-content: center;
 }
 #main_box{
-    border: 3px;
+    border: 2px;
     height: 800px;
     width: 700px;
     border-style: solid;
+    border-radius: 4px;
 }
 
 #title{
@@ -81,6 +86,8 @@
     margin-top: 15px;
     margin-left: 25px;
     height: 25px;
+    background-color: #03398a;
+    color: #F1F5F9;
 }
 
 #secound_title
