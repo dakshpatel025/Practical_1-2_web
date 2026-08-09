@@ -1,5 +1,6 @@
 body{
     background-color: #F1F5F9;
+    font-family: Arial, sans-serif;
 }
 
 #text{
@@ -28,72 +29,18 @@ body{
 
 }
 
-.cen{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-#main_box{
-    border: 2px;
-    height: 800px;
-    width: 700px;
-    border-style: solid;
-    border-radius: 4px;
-}
-
-#title{
-    text-align: center;
-    font-size: 50px;
-    text-decoration:underline;
-}
-
-.detail{
-    font-size: 25px;
-    margin-left: 10px;
-}
-
-.last{
-    margin-left: 10px;
-    margin-top: 15px;
-    height: 18px;
-    display: inline-block;
-}
-
-#first{
-    margin-left: 96px;
-    margin-top: 10px;
-    height: 18px;
-}
-
-#Photo{
-    width: 125px;
-    height: 125px;
-    border: 2px;
-    text-decoration: none;
-    border-style: solid;
-    border-color: black;
-    display: inline-block;
-    margin-left: 50px;
-    text-align: center;
-}
-
-
-#name{
-    height: 40px;
-}
-
 .input{
     margin-top: 15px;
     margin-left: 25px;
     height: 25px;
     background-color: #03398a;
     color: #F1F5F9;
+    border-color: #03398a;
 }
 
-#secound_title
-{
-    text-decoration: underline black; 
-    text-align: center;
+.input:hover{
+    background-color: #F1F5F9;
+    color: black;
 }
 
 .fot{
@@ -107,8 +54,62 @@ body{
     margin-top: 35px;
 }
 
-/* .la{
+.top_box{
+    width: 100%;
+    border-collapse: collapse;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    height: 800px;
+}
+
+#top{
+   margin-left: 35px;
+}
+
+#first_box{
     display: flex;
-    justify-content: end;
-    align-items: end;
-} */
+    align-items: center;
+    justify-content: left;
+}
+
+.second_top{
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    width: 95%;
+    border-collapse: collapse;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    margin-left: 47px;
+}
+
+#second_title{
+    margin-left: 35px;
+
+}
+
+.second_last{
+    height: auto;
+    display: flex;
+    width: 95%;
+    
+}
+
+.adjust{
+    font-size: 21px;
+    margin-left: 35px;
+    font-style: normal;
+}
+
+.center{
+    width: 95%;
+    height: auto;
+    border-collapse: collapse;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    margin-left: 47px;
+}
+
+.second_last_2{
+    height: auto;
+    display: inline-flex;
+    width: 100%;
+}

@@ -6,6 +6,7 @@ body{
     justify-content: center;
     background-image: url("../html/charusat.jpg");
     background-size: cover;
+    font-family: Arial, sans-serif;
 }
 
 #mainbox{
