@@ -71,13 +71,32 @@
                 </div>
 
                 <div style="display:inline-block; width: 30%;">
-                    
-                    <div style="margin-top: 20px; margin-left: 35px; border: 1.5px; border-color: black; border-style: solid; width: 130px; height: 120px;"></div>
-                    <br>
-                    <input type="button" style="margin-left: 15px; height: 45px; width: 80px; background-color: rgb(131, 183, 228); color: aliceblue;" value="Click photo"></label>
-                    <input type="button" style="margin-left: 5px; height: 45px; width: 80px; background-color: rgb(131, 183, 228); color: aliceblue;" value="Clear"></label>
-                </div>
+                    <div id="photoPreview"
+                            style="margin-top: 20px; margin-left: 35px; border: 1.5px solid black;
+                            width: 130px; height: 120px; display: flex;
+                            justify-content: center; align-items: center; overflow: hidden;">
+                            <span>No Photo</span>
+                    </div>
+                
 
+                <br>
+
+                    <div>
+                        <input type="file" id="photoInput" accept="image/*" style="display:none;">
+
+                        <input type="button"
+                            value="Click photo"
+                            onclick="document.getElementById('photoInput').click()"
+                            style="margin-left: 15px; height: 45px; width: 80px;
+                                    background-color: rgb(131, 183, 228); color: aliceblue;">
+
+                        <input type="button"
+                            value="Clear"
+                            onclick="clearPhoto()"
+                            style="margin-left: 5px; height: 45px; width: 80px;
+                                    background-color: rgb(131, 183, 228); color: aliceblue;">
+                    </div>
+                </div>
             </div>
 
             <br>
@@ -241,5 +260,8 @@
     <div class="la">
         <footer class="fot" style="color: rgb(255, 255, 255);"> © 2018 Charotar University of Science & Technology. All Rights Reserved </footer>
     </div>
+    
+    <script src="../js/Main_page.js"></script>
+
 </body>
 </html>

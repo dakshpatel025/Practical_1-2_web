@@ -86,7 +86,6 @@
             </div>
 
 
-            <!-- Father Photo -->
             <div class="photo-area">
 
                 <label>Father Photo</label>
@@ -118,7 +117,6 @@
     </div>
 
 
-    <!-- Mother Box -->
     <div class="family-box">
 
         <div class="box-heading">
@@ -192,46 +190,7 @@
 </div>
 
 
-<script>
-
-    // Father photo preview
-    document.getElementById("fatherPhoto").addEventListener("change", function () {
-
-        let file = this.files[0];
-
-        if (file) {
-            let reader = new FileReader();
-
-            reader.onload = function (e) {
-                document.getElementById("fatherPreview").src = e.target.result;
-                document.getElementById("fatherPreview").style.display = "block";
-                document.getElementById("fatherText").style.display = "none";
-            };
-
-            reader.readAsDataURL(file);
-        }
-    });
-
-
-    // Mother photo preview
-    document.getElementById("motherPhoto").addEventListener("change", function () {
-
-        let file = this.files[0];
-
-        if (file) {
-            let reader = new FileReader();
-
-            reader.onload = function (e) {
-                document.getElementById("motherPreview").src = e.target.result;
-                document.getElementById("motherPreview").style.display = "block";
-                document.getElementById("motherText").style.display = "none";
-            };
-
-            reader.readAsDataURL(file);
-        }
-    });
-
-</script>
+    <script src="../js/Family_page.js"></script>
 
 </body>
 </html>
