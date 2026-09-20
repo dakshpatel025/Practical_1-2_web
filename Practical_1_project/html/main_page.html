@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Profile | StudentHub Portal</title>
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/main_page_style.css">
+</head>
+<body>
+    <a href="#main" class="skip-link">Skip to Content</a>
+    <div id="text">
+        <a class="brand" href="../index.html">
+            <img src="../image/charusat_logo.png" alt="CHARUSAT logo">
+            <span>Student Hub Portal</span>
+        </a>
+    </div>
+    <div id="space"></div>
+    <div id="nav">
+        <nav>
+            <a href="../index.html" class="input">Home</a>
+            <a href="main_page.html" class="input active">Profile</a>
+            <a href="family.html" class="input">Family detail</a>
+            <a href="semester_result.html" class="input">Semester result</a>
+            <a href="Student_attendance.html" class="input">Attendance</a>
+            <a href="Student_hostel.html" class="input">Student hostel</a>
+            <a href="Student_Payment.html" class="input">Payment detail</a>
+            <a href="Student_time-table.html" class="input">Time - table</a>
+            <a href="course_details.html" class="input">Course</a>
+            <a href="events.html" class="input">Events</a>
+            <a href="faq.html" class="input">FAQ</a>
+            <a href="register.html" class="input">Register</a>
+            <a href="feedback.html" class="input">Feedback</a>
+        </nav>
+    </div>
+    <div class="breadcrumb">
+        <a href="../index.html">Home</a> / Student Profile
+    </div>
+    <main id="main">
+        <div class="profile-container">
+            <div class="top_box">
+                <div id="first_box">
+                    <h2 id="top">Student Profile</h2>
+                </div>
+                <div class="second_top">
+                    <h3 id="second_title">General Information & Admission Records</h3>
+                </div>
+                <div class="profile-content">
+                    <div class="profile-left-col">
+                        <div class="form-line">
+                            <label for="stdId">Student ID</label>
+                            <input type="text" id="stdId" value="24DCS001" placeholder="Student ID" readonly>
+                        </div>
+                        <div class="form-line">
+                            <label for="regDate">Registration Date</label>
+                            <input type="text" id="regDate" value="18/06/2024" placeholder="DD/MM/YYYY" readonly>
+                        </div>
+                        <div class="form-line">
+                            <label for="fullName">Full Name</label>
+                            <input type="text" id="fullName" value="Patel Daksh K." placeholder="Full Name">
+                        </div>
+                        <p class="sub-note">(As Per Last Qualifying Marksheet)</p>
+                        <div class="form-line">
+                            <label for="dispName">Display Name</label>
+                            <input type="text" id="dispName" value="Daksh Patel" placeholder="Display Name">
+                        </div>
+                        <div class="form-line">
+                            <label for="mName">Mother Name</label>
+                            <input type="text" id="mName" value="Bhavnaben" placeholder="Mother Name">
+                        </div>
+                        <div class="form-line">
+                            <label for="bDate">Birth Date *</label>
+                            <input type="date" id="bDate" value="2006-05-14">
+                        </div>
+                        <div class="form-line">
+                            <label for="bPlace">Birth Place *</label>
+                            <input type="text" id="bPlace" value="Ahmedabad" placeholder="Birth Place">
+                        </div>
+                        <div class="form-line">
+                            <label>Gender *</label>
+                            <div style="display: flex; gap: 20px;">
+                                <label style="display: inline-flex; align-items: center; gap: 6px; font-weight: normal; cursor: pointer;">
+                                    <input type="radio" name="gender" value="Male" checked> Male
+                                </label>
+                                <label style="display: inline-flex; align-items: center; gap: 6px; font-weight: normal; cursor: pointer;">
+                                    <input type="radio" name="gender" value="Female"> Female
+                                </label>
+                                <label style="display: inline-flex; align-items: center; gap: 6px; font-weight: normal; cursor: pointer;">
+                                    <input type="radio" name="gender" value="Other"> Other
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-line">
+                            <label for="d2dCheck">D2D Admission</label>
+                            <div style="display: flex; align-items: center; gap: 8px;">
+                                <input type="checkbox" id="d2dCheck" style="width: 18px; height: 18px; cursor: pointer;">
+                                <span style="font-size: 14px;">Is D2D (Diploma to Degree) Student</span>
+                            </div>
+                        </div>
+                        <div class="form-line">
+                            <label for="uniName">University *</label>
+                            <input type="text" id="uniName" value="CHARUSAT" readonly>
+                        </div>
+                        <div class="form-line">
+                            <label for="instSelect">Institute *</label>
+                            <select id="instSelect">
+                                <option value="DEPSTAR" selected>DEPSTAR</option>
+                                <option value="CSPIT">CSPIT</option>
+                                <option value="CMPICA">CMPICA</option>
+                                <option value="IIIM">IIIM</option>
+                            </select>
+                        </div>
+                        <div class="form-line">
+                            <label for="progSelect">Program *</label>
+                            <select id="progSelect">
+                                <option value="B.Tech CSE" selected>B.Tech Computer Science & Engineering</option>
+                                <option value="B.Tech IT">B.Tech Information Technology</option>
+                                <option value="BBA">BBA</option>
+                                <option value="BCA">BCA</option>
+                                <option value="BSc.IT">BSc.IT</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="profile-right-col">
+                        <label style="font-weight: 700; font-size: 15px; color: var(--text-primary);">Student Photograph</label>
+                        <div id="photoPreview" class="photo-preview-box">
+                            <span>No Photo Uploaded</span>
+                        </div>
+                        <div class="photo-actions">
+                            <input type="file" id="photoInput" accept="image/*" style="display:none;">
+                            <input type="button"
+                                   value="Upload Photo"
+                                   onclick="document.getElementById('photoInput').click()"
+                                   class="btn-upload">
+                            <input type="button"
+                                   value="Clear"
+                                   onclick="clearPhoto()"
+                                   class="btn-clear">
+                        </div>
+                        <div class="admission-info-box">
+                            <div class="form-line">
+                                <label for="casteSelect">Admission Caste</label>
+                                <select id="casteSelect">
+                                    <option value="OPEN" selected>OPEN</option>
+                                    <option value="EWS">EWS</option>
+                                    <option value="OBC">OBC</option>
+                                    <option value="SC">SC</option>
+                                    <option value="ST">ST</option>
+                                </select>
+                            </div>
+                            <div class="form-line">
+                                <label for="religionSelect">Religion</label>
+                                <select id="religionSelect">
+                                    <option value="Hindu" selected>Hindu</option>
+                                    <option value="Jain">Jain</option>
+                                    <option value="Muslim">Muslim</option>
+                                    <option value="Sikh">Sikh</option>
+                                    <option value="Christian">Christian</option>
+                                </select>
+                            </div>
+                            <div class="form-line">
+                                <label>Nationality</label>
+                                <div>
+                                    <label style="display: inline-flex; align-items: center; gap: 6px; font-weight: normal; cursor: pointer;">
+                                        <input type="radio" name="nat" value="Indian" checked> Indian
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="profile-save-bar">
+                        <button type="button" class="btn btn-primary" onclick="alert('✅ Profile details saved successfully!')" style="font-size: 15px; padding: 10px 32px;">
+                            Save Profile Details
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="fot">
+        <p>CHARUSAT University © 2018 - 2026. All Rights Reserved. | <a href="feedback.html">Feedback & Support</a></p>
+    </footer>
+    <script src="../js/theme_nav.js"></script>
+    <script src="../js/Main_page.js"></script>
+</body>
+</html>

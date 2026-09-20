@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academic Time Table | StudentHub Portal</title>
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/time_table.css">
+</head>
+<body>
+    <a href="#main" class="skip-link">Skip to Content</a>
+    <div id="text">
+        <a class="brand" href="../index.html">
+            <img src="../image/charusat_logo.png" alt="CHARUSAT logo">
+            <span>Student Hub Portal</span>
+        </a>
+    </div>
+    <div id="space"></div>
+    <div id="nav">
+        <nav>
+            <a href="../index.html" class="input">Home</a>
+            <a href="main_page.html" class="input">Profile</a>
+            <a href="family.html" class="input">Family detail</a>
+            <a href="semester_result.html" class="input">Semester result</a>
+            <a href="Student_attendance.html" class="input">Attendance</a>
+            <a href="Student_hostel.html" class="input">Student hostel</a>
+            <a href="Student_Payment.html" class="input">Payment detail</a>
+            <a href="Student_time-table.html" class="input active">Time - table</a>
+            <a href="course_details.html" class="input">Course</a>
+            <a href="events.html" class="input">Events</a>
+            <a href="faq.html" class="input">FAQ</a>
+            <a href="register.html" class="input">Register</a>
+            <a href="feedback.html" class="input">Feedback</a>
+        </nav>
+    </div>
+    <div class="breadcrumb">
+        <a href="../index.html">Home</a> / Academic Time Table
+    </div>
+    <main id="main">
+        <div class="timetable-wrapper">
+            <div id="title" style="margin-bottom: 8px;">
+                Daily Class Schedule & Attendance Status
+            </div>
+            <p style="text-align: center; color: var(--text-secondary); font-size: 14px; margin-top: 0; margin-bottom: 25px;">
+                Semester 4 - B.Tech Computer Science & Engineering (Division A)
+            </p>
+            <div class="timetable-controls-card">
+                <div class="date-picker-group">
+                    <label for="scheduleDate">Select Date:</label>
+                    <input type="date" id="scheduleDate" value="2026-09-18">
+                </div>
+                <div class="day-tabs-row" role="tablist" aria-label="Select Day">
+                    <button type="button" class="day-tab-btn" data-day="Mon">Mon</button>
+                    <button type="button" class="day-tab-btn" data-day="Tue">Tue</button>
+                    <button type="button" class="day-tab-btn" data-day="Wed">Wed</button>
+                    <button type="button" class="day-tab-btn" data-day="Thu">Thu</button>
+                    <button type="button" class="day-tab-btn active" data-day="Fri">Fri (Today)</button>
+                    <button type="button" class="day-tab-btn" data-day="Sat">Sat</button>
+                </div>
+            </div>
+            <div class="timetable-card">
+                <div class="timetable-card-header">
+                    <h3 id="currentDayScheduleTitle">Schedule for Friday, 18 September 2026</h3>
+                    <span style="font-size: 13px; color: var(--text-secondary);">Building: DEPSTAR Block 3</span>
+                </div>
+                <div class="table-wrap" style="width: 100%; border: none; border-radius: 4px; box-shadow: none;">
+                    <table class="commen-table">
+                        <thead>
+                            <tr>
+                                <th>Time Slot</th>
+                                <th>Course Title</th>
+                                <th>Class Type / Venue</th>
+                                <th>Faculty In-Charge</th>
+                                <th>Attendance Status</th>
+                            </tr>
+                        </thead>
+                        <tbody id="timetableBody">
+                            <tr>
+                                <td><strong>09:10 - 10:09</strong></td>
+                                <td><strong>CEUE203</strong> - Object Oriented Programming</td>
+                                <td><span class="badge badge-info">Lecture</span> &nbsp; Room 302</td>
+                                <td>Prof. Hardik Vyas</td>
+                                <td><span class="badge badge-success">Present (P)</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>10:10 - 11:09</strong></td>
+                                <td><strong>CSUC201</strong> - Fundamentals of Data Structures</td>
+                                <td><span class="badge badge-info">Lecture</span> &nbsp; Room 302</td>
+                                <td>Prof. Anjali Patel</td>
+                                <td><span class="badge badge-success">Present (P)</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>11:10 - 12:10</strong></td>
+                                <td colspan="4" style="text-align: center;">
+                                    ☕ Campus Lunch & Recess Break
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><strong>12:10 - 13:09</strong></td>
+                                <td><strong>ITUC201</strong> - Fundamentals of Computer Networks</td>
+                                <td><span class="badge badge-info">Lecture</span> &nbsp; Room 304</td>
+                                <td>Dr. Nilesh Modi</td>
+                                <td><span class="badge badge-success">Present (P)</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>13:09 - 14:10</strong></td>
+                                <td><strong>ITUE203</strong> - Web Development Frameworks</td>
+                                <td><span class="badge badge-warning">Lab</span> &nbsp; Web Lab 2</td>
+                                <td>Prof. Bhavin Shah</td>
+                                <td><span class="badge badge-success">Present (P)</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>14:20 - 15:19</strong></td>
+                                <td><strong>MSUD203</strong> - Discrete Mathematics</td>
+                                <td><span class="badge badge-info">Lecture</span> &nbsp; Room 302</td>
+                                <td>Prof. Ritu Mehta</td>
+                                <td><span class="badge badge-danger">Absent (A)</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>15:20 - 16:20</strong></td>
+                                <td><strong>HSUV201</strong> - Critical Thinking & Problem Solving</td>
+                                <td><span class="badge badge-info">Lecture</span> &nbsp; Room 301</td>
+                                <td>Prof. Sanjay Patel</td>
+                                <td><span class="badge badge-warning">Not Taken (NT)</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="timetable-legend">
+                    <div class="legend-item">
+                        <span class="badge badge-success">P</span> = Present
+                    </div>
+                    <div class="legend-item">
+                        <span class="badge badge-danger">A</span> = Absent
+                    </div>
+                    <div class="legend-item">
+                        <span class="badge badge-warning">NT</span> = Class Not Taken / Postponed
+                    </div>
+                    <div class="legend-item" style="margin-left: auto;">
+                        Total Lectures Scheduled: <strong>6 Sessions</strong>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="fot">
+        <p>CHARUSAT University © 2018 - 2026. All Rights Reserved. | <a href="feedback.html">Feedback & Support</a></p>
+    </footer>
+    <script src="../js/theme_nav.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const tabs = document.querySelectorAll('.day-tab-btn');
+            const title = document.getElementById('currentDayScheduleTitle');
+            tabs.forEach(tab => {
+                tab.addEventListener('click', function () {
+                    tabs.forEach(t => t.classList.remove('active'));
+                    this.classList.add('active');
+                    const day = this.getAttribute('data-day');
+                    if (title) {
+                        title.textContent = `Schedule for ${day}day (${day === 'Fri' ? '18 Sept 2026' : 'Regular Weekly Slot'})`;
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

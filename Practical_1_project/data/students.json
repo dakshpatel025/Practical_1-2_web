@@ -1,0 +1,57 @@
+[
+  {
+    "id": "24DCS001",
+    "name": "Daksh Patel",
+    "course": "B.Tech Computer Science",
+    "institute": "DEPSTAR",
+    "semester": 4,
+    "cgpa": 9.42,
+    "email": "24dcs001@charusat.edu.in",
+    "city": "Ahmedabad",
+    "status": "Active"
+  },
+  {
+    "id": "24DCS002",
+    "name": "Aarav Shah",
+    "course": "B.Tech Computer Science",
+    "institute": "DEPSTAR",
+    "semester": 4,
+    "cgpa": 8.85,
+    "email": "24dcs002@charusat.edu.in",
+    "city": "Vadodara",
+    "status": "Active"
+  },
+  {
+    "id": "24DCS003",
+    "name": "Ananya Sharma",
+    "course": "B.Tech Information Technology",
+    "institute": "CSPIT",
+    "semester": 4,
+    "cgpa": 9.15,
+    "email": "24dcs003@charusat.edu.in",
+    "city": "Surat",
+    "status": "Active"
+  },
+  {
+    "id": "24DCS004",
+    "name": "Rohan Mehta",
+    "course": "B.Tech Computer Engineering",
+    "institute": "CSPIT",
+    "semester": 4,
+    "cgpa": 8.40,
+    "email": "24dcs004@charusat.edu.in",
+    "city": "Rajkot",
+    "status": "Active"
+  },
+  {
+    "id": "24DCS005",
+    "name": "Pooja Trivedi",
+    "course": "BCA",
+    "institute": "CMPICA",
+    "semester": 2,
+    "cgpa": 8.90,
+    "email": "24bca005@charusat.edu.in",
+    "city": "Anand",
+    "status": "Active"
+  }
+]

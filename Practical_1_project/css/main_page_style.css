@@ -1,0 +1,182 @@
+.profile-container {
+    width: 95%;
+    max-width: 1100px;
+    margin: 25px auto 40px;
+}
+.top_box {
+    width: 100%;
+    box-shadow: var(--card-shadow);
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+#first_box {
+    display: flex;
+    align-items: center;
+    background-color: var(--primary-accent);
+    padding: 12px 20px;
+}
+#top {
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 700;
+    margin: 0;
+}
+.second_top {
+    min-height: 48px;
+    display: flex;
+    align-items: center;
+    background-color: var(--bg-secondary);
+    color: var(--text-primary);
+    padding: 0 20px;
+    border-bottom: 1px solid var(--border-color);
+}
+#second_title {
+    font-size: 16px;
+    font-weight: 700;
+    margin: 0;
+}
+.profile-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 28px;
+}
+.profile-left-col {
+    flex: 2;
+    min-width: 320px;
+}
+.profile-right-col {
+    flex: 1;
+    min-width: 260px;
+    border-left: 1px solid var(--border-color);
+    padding-left: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.form-line {
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+.form-line > label:first-child {
+    width: 170px;
+    min-width: 150px;
+    font-weight: 600;
+    font-size: 14px;
+    color: var(--text-primary);
+    margin: 0;
+}
+.form-line > input,
+.form-line > select {
+    flex: 1;
+    max-width: 380px;
+}
+.sub-note {
+    font-size: 12px;
+    color: var(--text-secondary);
+    margin: -10px 0 14px 185px;
+}
+.photo-preview-box {
+    margin: 15px auto;
+    border: 2px dashed var(--border-color);
+    width: 150px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background: var(--bg-primary);
+    border-radius: var(--radius-md);
+    color: var(--text-secondary);
+    font-size: 13px;
+    transition: border-color 0.2s;
+}
+.photo-preview-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.photo-actions {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 25px;
+}
+.photo-actions input[type="button"] {
+    padding: 8px 16px;
+    font-size: 13px;
+    font-weight: 600;
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    border: 1px solid transparent;
+    transition: all 0.2s ease;
+}
+.btn-upload {
+    background-color: var(--primary-accent) !important;
+    color: #ffffff !important;
+}
+.btn-upload:hover {
+    background-color: var(--primary-accent-hover) !important;
+}
+.btn-clear {
+    background-color: var(--bg-secondary) !important;
+    color: var(--text-primary) !important;
+    border-color: var(--border-color) !important;
+}
+.btn-clear:hover {
+    background-color: var(--border-color) !important;
+}
+.admission-info-box {
+    width: 100%;
+    padding-top: 15px;
+    border-top: 1px solid var(--border-color);
+}
+.admission-info-box .form-line > label:first-child {
+    width: 130px;
+    min-width: 120px;
+}
+.admission-info-box .form-line > select {
+    max-width: 160px;
+}
+.profile-save-bar {
+    text-align: center;
+    margin-top: 25px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border-color);
+    width: 100%;
+}
+@media (max-width: 860px) {
+    .profile-content {
+        flex-direction: column;
+        padding: 20px 16px;
+    }
+    .profile-right-col {
+        border-left: none;
+        border-top: 1px solid var(--border-color);
+        padding-left: 0;
+        padding-top: 25px;
+        align-items: stretch;
+    }
+    .form-line {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 6px;
+    }
+    .form-line > label:first-child {
+        width: 100%;
+    }
+    .form-line > input,
+    .form-line > select {
+        width: 100%;
+        max-width: 100%;
+    }
+    .sub-note {
+        margin-left: 0;
+    }
+}

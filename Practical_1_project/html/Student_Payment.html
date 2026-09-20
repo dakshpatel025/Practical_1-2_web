@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fee Payment Details | StudentHub Portal</title>
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/payment.css">
+</head>
+<body>
+    <a href="#main" class="skip-link">Skip to Content</a>
+    <div id="text">
+        <a class="brand" href="../index.html">
+            <img src="../image/charusat_logo.png" alt="CHARUSAT logo">
+            <span>Student Hub Portal</span>
+        </a>
+    </div>
+    <div id="space"></div>
+    <div id="nav">
+        <nav>
+            <a href="../index.html" class="input">Home</a>
+            <a href="main_page.html" class="input">Profile</a>
+            <a href="family.html" class="input">Family detail</a>
+            <a href="semester_result.html" class="input">Semester result</a>
+            <a href="Student_attendance.html" class="input">Attendance</a>
+            <a href="Student_hostel.html" class="input">Student hostel</a>
+            <a href="Student_Payment.html" class="input active">Payment detail</a>
+            <a href="Student_time-table.html" class="input">Time - table</a>
+            <a href="course_details.html" class="input">Course</a>
+            <a href="events.html" class="input">Events</a>
+            <a href="faq.html" class="input">FAQ</a>
+            <a href="register.html" class="input">Register</a>
+            <a href="feedback.html" class="input">Feedback</a>
+        </nav>
+    </div>
+    <div class="breadcrumb">
+        <a href="../index.html">Home</a> / Fee & Payment History
+    </div>
+    <main id="main">
+        <div class="payment-wrapper">
+            <div id="title" style="margin-bottom: 8px;">
+                Semester Tuition Fee & Payment History
+            </div>
+            <p style="text-align: center; color: var(--text-secondary); font-size: 14px; margin-top: 0; margin-bottom: 25px;">
+                Student Enrollment: <strong>24DCS001</strong> | Program: <strong>B.Tech CSE (4 Years)</strong>
+            </p>
+            <div class="payment-summary-cards">
+                <div class="payment-card">
+                    <h4>Total Academic Fees</h4>
+                    <div class="stat-val">₹ 3,90,000</div>
+                </div>
+                <div class="payment-card">
+                    <h4>Fees Paid to Date</h4>
+                    <div class="stat-val" style="color: var(--success);">₹ 2,60,000</div>
+                </div>
+                <div class="payment-card">
+                    <h4>Pending Dues</h4>
+                    <div class="stat-val" style="color: var(--warning);">₹ 1,30,000</div>
+                </div>
+                <div class="payment-card">
+                    <h4>Scholarship Received</h4>
+                    <div class="stat-val" style="color: var(--info);">₹ 50,000</div>
+                </div>
+            </div>
+            <div class="table-wrap table-title-row">
+                <table class="commen-table">
+                    <thead>
+                        <tr>
+                            <th>Semester</th>
+                            <th>Total Tuition Fees</th>
+                            <th>Paid Amount</th>
+                            <th>Pending Balance</th>
+                            <th>Scholarship Adjusted</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Semester 1</strong></td>
+                            <td>₹ 65,000</td>
+                            <td>₹ 65,000</td>
+                            <td>₹ 0</td>
+                            <td>₹ 25,000</td>
+                            <td><span class="badge badge-success">Paid</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Semester 2</strong></td>
+                            <td>₹ 65,000</td>
+                            <td>₹ 65,000</td>
+                            <td>₹ 0</td>
+                            <td>—</td>
+                            <td><span class="badge badge-success">Paid</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Semester 3</strong></td>
+                            <td>₹ 65,000</td>
+                            <td>₹ 65,000</td>
+                            <td>₹ 0</td>
+                            <td>₹ 25,000</td>
+                            <td><span class="badge badge-success">Paid</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Semester 4</strong> (Current)</td>
+                            <td>₹ 65,000</td>
+                            <td>₹ 65,000</td>
+                            <td>₹ 0</td>
+                            <td>—</td>
+                            <td><span class="badge badge-success">Paid</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Semester 5</strong></td>
+                            <td>₹ 65,000</td>
+                            <td>₹ 0</td>
+                            <td>₹ 65,000</td>
+                            <td>—</td>
+                            <td><span class="badge badge-warning">Due Soon</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Semester 6</strong></td>
+                            <td>₹ 65,000</td>
+                            <td>₹ 0</td>
+                            <td>₹ 65,000</td>
+                            <td>—</td>
+                            <td><span class="badge badge-warning">Upcoming</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="payment-quick-actions">
+                <div>
+                    <h4 style="margin: 0 0 4px; color: var(--text-primary);">Need to pay Semester 5 fees?</h4>
+                    <p style="margin: 0; font-size: 13px; color: var(--text-secondary);">Online payment gateway supports UPI, Net Banking, Debit/Credit Card, and NEFT Challan.</p>
+                </div>
+                <button type="button" class="btn btn-primary" onclick="alert('Redirecting to University Secure Payment Gateway (BillDesk / HDFC)...')">
+                    💳 Pay Semester 5 Fees Online &rarr;
+                </button>
+            </div>
+        </div>
+    </main>
+    <footer class="fot">
+        <p>CHARUSAT University © 2018 - 2026. All Rights Reserved. | <a href="feedback.html">Feedback & Support</a></p>
+    </footer>
+    <script src="../js/theme_nav.js"></script>
+</body>
+</html>

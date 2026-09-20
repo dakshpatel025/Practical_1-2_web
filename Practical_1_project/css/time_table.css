@@ -1,0 +1,114 @@
+.timetable-wrapper {
+    width: 95%;
+    max-width: 1000px;
+    margin: 25px auto 40px;
+}
+.timetable-controls-card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    padding: 18px 24px;
+    margin-bottom: 22px;
+    box-shadow: var(--card-shadow);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+.date-picker-group {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.date-picker-group label {
+    font-weight: 700;
+    font-size: 14px;
+    color: var(--text-primary);
+}
+.date-picker-group input[type="date"] {
+    padding: 8px 14px;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-sm);
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+}
+.day-tabs-row {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+.day-tab-btn {
+    padding: 7px 14px;
+    font-size: 13px;
+    font-weight: 600;
+    border-radius: 20px;
+    border: 1px solid var(--border-color);
+    background-color: var(--bg-primary);
+    color: var(--text-secondary);
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+.day-tab-btn:hover {
+    background-color: var(--bg-secondary);
+    color: var(--text-primary);
+}
+.day-tab-btn.active {
+    background-color: var(--primary-accent);
+    color: #ffffff;
+    border-color: var(--primary-accent);
+}
+.timetable-card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    box-shadow: var(--card-shadow);
+    overflow: hidden;
+}
+.timetable-card-header {
+    background-color: var(--bg-secondary);
+    padding: 14px 22px;
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.timetable-card-header h3 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+.timetable-legend {
+    padding: 16px 22px;
+    background-color: var(--bg-card);
+    border-top: 1px solid var(--border-light);
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    font-size: 13px;
+    color: var(--text-secondary);
+}
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+@media (max-width: 768px) {
+    .timetable-controls-card {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .date-picker-group {
+        justify-content: space-between;
+    }
+    .day-tabs-row {
+        justify-content: center;
+    }
+}

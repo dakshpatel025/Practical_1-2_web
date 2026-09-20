@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration | StudentHub Portal</title>
+    <link rel="stylesheet" href="../css/common.css">
+    <style>
+        .reg-box {
+            width: 90%;
+            max-width: 680px;
+            margin: 20px auto 40px;
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-md);
+            padding: 30px 35px;
+            box-shadow: var(--card-shadow);
+        }
+        .reg-box .form-group {
+            margin-bottom: 18px;
+        }
+        .reg-box label.form-label {
+            display: block;
+            font-weight: 600;
+            font-size: 14px;
+            margin-bottom: 6px;
+            color: var(--text-primary);
+        }
+        .error-text {
+            color: var(--danger);
+            font-size: 12.5px;
+            margin-top: 4px;
+            display: none;
+            font-weight: 600;
+        }
+        .strength-text {
+            font-size: 12.5px;
+            font-weight: 700;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <a href="#main" class="skip-link">Skip to Content</a>
+    <div id="text">
+        <a class="brand" href="../index.html">
+            <img src="../image/charusat_logo.png" alt="CHARUSAT logo">
+            <span>Student Hub Portal</span>
+        </a>
+    </div>
+    <div id="space"></div>
+    <div id="nav">
+        <nav>
+            <a href="../index.html" class="input">Home</a>
+            <a href="main_page.html" class="input">Profile</a>
+            <a href="family.html" class="input">Family detail</a>
+            <a href="semester_result.html" class="input">Semester result</a>
+            <a href="Student_attendance.html" class="input">Attendance</a>
+            <a href="Student_hostel.html" class="input">Student hostel</a>
+            <a href="Student_Payment.html" class="input">Payment detail</a>
+            <a href="Student_time-table.html" class="input">Time - table</a>
+            <a href="course_details.html" class="input">Course</a>
+            <a href="events.html" class="input">Events</a>
+            <a href="faq.html" class="input">FAQ</a>
+            <a href="register.html" class="input active">Register</a>
+            <a href="feedback.html" class="input">Feedback</a>
+        </nav>
+    </div>
+    <div class="breadcrumb">
+        <a href="../index.html">Home</a> / Student Registration (Practical 5)
+    </div>
+    <main id="main">
+        <div id="title" style="margin-bottom: 8px;">
+            Student Registration Portal
+        </div>
+        <p style="text-align: center; color: var(--text-secondary); font-size: 14px; margin-top: 0; margin-bottom: 25px;">
+            Practical 5: Comprehensive RegEx Form Validation, Password Strength Meter & HTML5 Canvas CAPTCHA
+        </p>
+        <div class="reg-box">
+            <form id="regForm" novalidate>
+                <div class="form-group">
+                    <label for="regName" class="form-label">Full Name *</label>
+                    <input type="text" id="regName" class="form-control" placeholder="Enter full name (e.g. Daksh Patel)">
+                    <div id="nameErr" class="error-text"></div>
+                </div>
+                <div class="form-group">
+                    <label for="regEmail" class="form-label">Email Address *</label>
+                    <input type="email" id="regEmail" class="form-control" placeholder="student@charusat.edu.in">
+                    <div id="emailErr" class="error-text"></div>
+                </div>
+                <div class="form-group">
+                    <label for="regMobile" class="form-label">Mobile Number *</label>
+                    <input type="tel" id="regMobile" class="form-control" placeholder="10-digit mobile number" maxlength="10">
+                    <div id="mobileErr" class="error-text"></div>
+                </div>
+                <div class="form-group">
+                    <label for="regPass" class="form-label">Password *</label>
+                    <input type="password" id="regPass" class="form-control" placeholder="Min 8 chars, 1 uppercase, 1 digit, 1 symbol">
+                    <div id="strengthText" class="strength-text"></div>
+                    <div id="passErr" class="error-text"></div>
+                </div>
+                <div class="form-group">
+                    <label for="regConfirmPass" class="form-label">Confirm Password *</label>
+                    <input type="password" id="regConfirmPass" class="form-control" placeholder="Re-enter password">
+                    <div id="confirmErr" class="error-text"></div>
+                </div>
+                <div class="form-group">
+                    <label for="regCourse" class="form-label">Degree Course *</label>
+                    <select id="regCourse" class="form-control">
+                        <option value="">-- Select Course --</option>
+                        <option value="B.Tech Computer Science">B.Tech Computer Science</option>
+                        <option value="B.Tech IT">B.Tech Information Technology</option>
+                        <option value="BCA">BCA</option>
+                        <option value="BSc.IT">BSc.IT</option>
+                        <option value="BBA">BBA</option>
+                    </select>
+                    <div id="courseErr" class="error-text"></div>
+                </div>
+                <div class="form-group">
+                    <label for="regYear" class="form-label">Academic Year *</label>
+                    <select id="regYear" class="form-control">
+                        <option value="">-- Select Year --</option>
+                        <option value="1st Year">1st Year</option>
+                        <option value="2nd Year">2nd Year</option>
+                        <option value="3rd Year">3rd Year</option>
+                        <option value="4th Year">4th Year</option>
+                    </select>
+                    <div id="yearErr" class="error-text"></div>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Gender *</label>
+                    <div style="display: flex; gap: 20px;">
+                        <label style="display: inline-flex; align-items: center; gap: 6px; font-weight: normal; cursor: pointer;">
+                            <input type="radio" name="gender" value="Male"> Male
+                        </label>
+                        <label style="display: inline-flex; align-items: center; gap: 6px; font-weight: normal; cursor: pointer;">
+                            <input type="radio" name="gender" value="Female"> Female
+                        </label>
+                        <label style="display: inline-flex; align-items: center; gap: 6px; font-weight: normal; cursor: pointer;">
+                            <input type="radio" name="gender" value="Other"> Other
+                        </label>
+                    </div>
+                    <div id="genderErr" class="error-text"></div>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Security CAPTCHA *</label>
+                    <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 8px;">
+                        <canvas id="captchaCanvas" width="140" height="38" style="border: 1px solid var(--border-color); background: var(--bg-secondary); border-radius: var(--radius-sm);"></canvas>
+                        <button type="button" onclick="generateCaptcha()" class="btn btn-secondary" style="padding: 6px 12px; font-size: 13px;">🔄 Refresh</button>
+                    </div>
+                    <input type="text" id="captchaInput" class="form-control" placeholder="Enter the code shown above">
+                    <div id="captchaErr" class="error-text"></div>
+                </div>
+                <div class="form-group">
+                    <label style="display: inline-flex; align-items: center; gap: 8px; font-weight: normal; font-size: 13.5px; cursor: pointer;">
+                        <input type="checkbox" id="regTerms" style="width: 17px; height: 17px; cursor: pointer;"> I accept all university terms, campus code of conduct, and minimum attendance rules.
+                    </label>
+                    <div id="termsErr" class="error-text"></div>
+                </div>
+                <div style="display: flex; justify-content: flex-end; gap: 12px; margin-top: 25px;">
+                    <button type="reset" class="btn btn-secondary">Reset Form</button>
+                    <button type="submit" class="btn btn-primary">Complete Registration &rarr;</button>
+                </div>
+            </form>
+        </div>
+    </main>
+    <footer class="fot">
+        <p>CHARUSAT University © 2018 - 2026. All Rights Reserved. | <a href="feedback.html">Feedback & Support</a></p>
+    </footer>
+    <script src="../js/register_validation.js"></script>
+</body>
+</html>

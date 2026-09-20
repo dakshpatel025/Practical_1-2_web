@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Attendance | StudentHub Portal</title>
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/attendance.css">
+    <style>
+        .attendance-summary-cards {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            max-width: 950px;
+            margin: 0 auto 25px;
+            padding: 0 15px;
+        }
+        .summary-card {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-md);
+            padding: 16px 20px;
+            min-width: 200px;
+            text-align: center;
+            box-shadow: var(--card-shadow);
+        }
+        .summary-card h4 {
+            margin: 0 0 6px;
+            font-size: 13px;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .summary-card .stat-num {
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--primary-accent);
+        }
+    </style>
+</head>
+<body>
+    <a href="#main" class="skip-link">Skip to Content</a>
+    <div id="text">
+        <a class="brand" href="../index.html">
+            <img src="../image/charusat_logo.png" alt="CHARUSAT logo">
+            <span>Student Hub Portal</span>
+        </a>
+    </div>
+    <div id="space"></div>
+    <div id="nav">
+        <nav>
+            <a href="../index.html" class="input">Home</a>
+            <a href="main_page.html" class="input">Profile</a>
+            <a href="family.html" class="input">Family detail</a>
+            <a href="semester_result.html" class="input">Semester result</a>
+            <a href="Student_attendance.html" class="input active">Attendance</a>
+            <a href="Student_hostel.html" class="input">Student hostel</a>
+            <a href="Student_Payment.html" class="input">Payment detail</a>
+            <a href="Student_time-table.html" class="input">Time - table</a>
+            <a href="course_details.html" class="input">Course</a>
+            <a href="events.html" class="input">Events</a>
+            <a href="faq.html" class="input">FAQ</a>
+            <a href="register.html" class="input">Register</a>
+            <a href="feedback.html" class="input">Feedback</a>
+        </nav>
+    </div>
+    <div class="breadcrumb">
+        <a href="../index.html">Home</a> / Attendance Records
+    </div>
+    <main id="main">
+        <div id="title">
+            Student Gross Attendance - Semester 4
+        </div>
+        <div class="attendance-summary-cards">
+            <div class="summary-card">
+                <h4>Total Classes</h4>
+                <div class="stat-num">242</div>
+            </div>
+            <div class="summary-card">
+                <h4>Present Count</h4>
+                <div class="stat-num" style="color: var(--success);">209</div>
+            </div>
+            <div class="summary-card">
+                <h4>Gross Percentage</h4>
+                <div class="stat-num">86.4%</div>
+            </div>
+            <div class="summary-card">
+                <h4>Exam Status</h4>
+                <div class="stat-num" style="color: var(--success); font-size: 16px;">Eligible (≥ 80%)</div>
+            </div>
+        </div>
+        <div class="table-wrap table-title-row">
+            <table class="commen-table">
+                <thead>
+                    <tr>
+                        <th>Course Code & Title</th>
+                        <th>Class Type</th>
+                        <th>Present / Total Sessions</th>
+                        <th>Attendance Percentage</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>CEUE203</strong> - Object Oriented Programming</td>
+                        <td><span class="badge badge-info">LECTURE</span></td>
+                        <td>32 / 36</td>
+                        <td><strong>88.9%</strong></td>
+                        <td><span class="badge badge-success">Good</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>CEUE203</strong> - Object Oriented Programming</td>
+                        <td><span class="badge badge-warning">LAB</span></td>
+                        <td>16 / 18</td>
+                        <td><strong>88.9%</strong></td>
+                        <td><span class="badge badge-success">Good</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>CSUC201</strong> - Fundamentals of Data Structures</td>
+                        <td><span class="badge badge-info">LECTURE</span></td>
+                        <td>34 / 38</td>
+                        <td><strong>89.5%</strong></td>
+                        <td><span class="badge badge-success">Good</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>CSUC201</strong> - Fundamentals of Data Structures</td>
+                        <td><span class="badge badge-warning">LAB</span></td>
+                        <td>18 / 20</td>
+                        <td><strong>90.0%</strong></td>
+                        <td><span class="badge badge-success">Excellent</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>HSUV201</strong> - Critical Thinking & Problem Solving</td>
+                        <td><span class="badge badge-info">LECTURE</span></td>
+                        <td>24 / 28</td>
+                        <td><strong>85.7%</strong></td>
+                        <td><span class="badge badge-success">Good</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>ITUC201</strong> - Fundamentals of Computer Networks</td>
+                        <td><span class="badge badge-info">LECTURE</span></td>
+                        <td>30 / 36</td>
+                        <td><strong>83.3%</strong></td>
+                        <td><span class="badge badge-success">Good</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>ITUC201</strong> - Fundamentals of Computer Networks</td>
+                        <td><span class="badge badge-warning">LAB</span></td>
+                        <td>15 / 18</td>
+                        <td><strong>83.3%</strong></td>
+                        <td><span class="badge badge-success">Good</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>ITUE203</strong> - Web Development Frameworks</td>
+                        <td><span class="badge badge-info">LECTURE</span></td>
+                        <td>31 / 34</td>
+                        <td><strong>91.2%</strong></td>
+                        <td><span class="badge badge-success">Excellent</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>ITUE203</strong> - Web Development Frameworks</td>
+                        <td><span class="badge badge-warning">LAB</span></td>
+                        <td>17 / 18</td>
+                        <td><strong>94.4%</strong></td>
+                        <td><span class="badge badge-success">Excellent</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>MSUD203</strong> - Discrete Mathematics</td>
+                        <td><span class="badge badge-info">LECTURE</span></td>
+                        <td>28 / 34</td>
+                        <td><strong>82.4%</strong></td>
+                        <td><span class="badge badge-success">Good</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+    <footer class="fot">
+        <p>CHARUSAT University © 2018 - 2026. All Rights Reserved. | <a href="feedback.html">Feedback & Support</a></p>
+    </footer>
+    <script src="../js/theme_nav.js"></script>
+</body>
+</html>

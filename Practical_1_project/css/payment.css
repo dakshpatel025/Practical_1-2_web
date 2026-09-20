@@ -1,0 +1,47 @@
+.payment-wrapper {
+    width: 95%;
+    max-width: 1050px;
+    margin: 25px auto 40px;
+}
+.payment-summary-cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-bottom: 25px;
+}
+.payment-card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    padding: 18px 22px;
+    flex: 1;
+    min-width: 210px;
+    text-align: center;
+    box-shadow: var(--card-shadow);
+}
+.payment-card h4 {
+    margin: 0 0 8px;
+    font-size: 13px;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+.payment-card .stat-val {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--primary-accent);
+}
+.payment-quick-actions {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    padding: 20px 24px;
+    margin-top: 25px;
+    box-shadow: var(--card-shadow);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}

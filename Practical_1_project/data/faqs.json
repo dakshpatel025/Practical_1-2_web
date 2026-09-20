@@ -1,0 +1,37 @@
+[
+  {
+    "id": 1,
+    "category": "Academic",
+    "question": "What is the minimum attendance requirement to appear for university exams?",
+    "answer": "Students must keep at least 80% attendance in each subject to be eligible for the end-semester examinations.",
+    "tags": ["attendance", "exams"]
+  },
+  {
+    "id": 2,
+    "category": "Fees",
+    "question": "How can I pay my semester fees online?",
+    "answer": "Use the Payment Details page to pay by net banking, UPI, or card before the due date.",
+    "tags": ["fees", "payment"]
+  },
+  {
+    "id": 3,
+    "category": "Hostel",
+    "question": "What are the hostel timings and rules?",
+    "answer": "Hostel gates close at 9:30 PM on weekdays and 10:00 PM on weekends, with prior approval needed for late entry.",
+    "tags": ["hostel", "rules"]
+  },
+  {
+    "id": 4,
+    "category": "Portal",
+    "question": "How do I reset my StudentHub password?",
+    "answer": "Use the Forgot password option on the login page and follow the reset link sent to your university email.",
+    "tags": ["login", "password"]
+  },
+  {
+    "id": 5,
+    "category": "Events",
+    "question": "How do I register for campus events?",
+    "answer": "Open the Events page, choose a program, and register from the available activity details section.",
+    "tags": ["events", "registration"]
+  }
+]

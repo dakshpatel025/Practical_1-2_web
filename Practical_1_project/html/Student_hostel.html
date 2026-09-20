@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hostel Details | StudentHub Portal</title>
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/hostel.css">
+</head>
+<body>
+    <a href="#main" class="skip-link">Skip to Content</a>
+    <div id="text">
+        <a class="brand" href="../index.html">
+            <img src="../image/charusat_logo.png" alt="CHARUSAT logo">
+            <span>Student Hub Portal</span>
+        </a>
+    </div>
+    <div id="space"></div>
+    <div id="nav">
+        <nav>
+            <a href="../index.html" class="input">Home</a>
+            <a href="main_page.html" class="input">Profile</a>
+            <a href="family.html" class="input">Family detail</a>
+            <a href="semester_result.html" class="input">Semester result</a>
+            <a href="Student_attendance.html" class="input">Attendance</a>
+            <a href="Student_hostel.html" class="input active">Student hostel</a>
+            <a href="Student_Payment.html" class="input">Payment detail</a>
+            <a href="Student_time-table.html" class="input">Time - table</a>
+            <a href="course_details.html" class="input">Course</a>
+            <a href="events.html" class="input">Events</a>
+            <a href="faq.html" class="input">FAQ</a>
+            <a href="register.html" class="input">Register</a>
+            <a href="feedback.html" class="input">Feedback</a>
+        </nav>
+    </div>
+    <div class="breadcrumb">
+        <a href="../index.html">Home</a> / Hostel Details
+    </div>
+    <main id="main">
+        <div class="hostel-container">
+            <h1>Student Hostel & Accommodation Details</h1>
+            <form id="hostelForm" onsubmit="event.preventDefault(); alert('✅ Hostel details saved successfully!');">
+                <div class="form-row">
+                    <label for="hostelName">Hostel Name :</label>
+                    <input type="text" id="hostelName" placeholder="Hostel name" class="input_details" value="CHARUSAT Campus Hostel Block A">
+                </div>
+                <div class="form-row">
+                    <label for="hostelAddress">Hostel Address :</label>
+                    <input type="text" id="hostelAddress" placeholder="Hostel Address" class="input_details" value="CHARUSAT Campus, Changa - 388421">
+                </div>
+                <div class="form-row">
+                    <label for="hostelMobile">Hostel Contact :</label>
+                    <input type="tel" id="hostelMobile" placeholder="Mobile No." maxlength="10" class="input_details" value="9876543210">
+                </div>
+                <div class="form-row">
+                    <label for="hostelType">Hostel Type :</label>
+                    <select id="hostelType" class="input_details">
+                        <option value="">Select Hostel Type</option>
+                        <option selected>College Hostel</option>
+                        <option>Private Hostel</option>
+                        <option>PG (Paying Guest)</option>
+                    </select>
+                </div>
+                <div class="form-row">
+                    <label for="roomNumber">Room Number :</label>
+                    <input type="text" id="roomNumber" placeholder="Room No." class="input_details" value="A-312">
+                </div>
+                <div class="form-row">
+                    <label for="roomType">Room Type :</label>
+                    <select id="roomType" class="input_details">
+                        <option value="">Select Room Type</option>
+                        <option>Single Sharing</option>
+                        <option selected>Double Sharing</option>
+                        <option>Triple Sharing</option>
+                        <option>Four Sharing</option>
+                    </select>
+                </div>
+                <div class="section-title">
+                    <h2>Hostel Owner Details</h2>
+                </div>
+                <div class="form-row">
+                    <label>Owner Name :</label>
+                    <div class="name-inputs">
+                        <input type="text" placeholder="First name" class="input_details" value="Rameshbhai">
+                        <input type="text" placeholder="Middle name" class="input_details" value="S.">
+                        <input type="text" placeholder="Last name" class="input_details" value="Patel">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <label for="ownerMobile">Owner Mobile :</label>
+                    <input type="tel" id="ownerMobile" placeholder="Mobile No." maxlength="10" class="input_details" value="9824056789">
+                </div>
+                <div class="section-title">
+                    <h2>Warden Details</h2>
+                </div>
+                <div class="form-row">
+                    <label for="wardenName">Warden Name :</label>
+                    <input type="text" id="wardenName" placeholder="Warden name" class="input_details" value="Pravinbhai Vankar">
+                </div>
+                <div class="form-row">
+                    <label for="wardenMobile">Warden Mobile :</label>
+                    <input type="tel" id="wardenMobile" placeholder="Mobile No." maxlength="10" class="input_details" value="9879512340">
+                </div>
+                <div class="section-title">
+                    <h2>Amenities & Living Details</h2>
+                </div>
+                <div class="form-row">
+                    <label for="monthlyFees">Monthly Fees (₹) :</label>
+                    <input type="number" id="monthlyFees" placeholder="Monthly fees" class="input_details" value="6500">
+                </div>
+                <div class="form-row">
+                    <label>Mess Facility :</label>
+                    <div style="display: flex; gap: 20px;">
+                        <label class="radio">
+                            <input type="radio" name="mess" checked> Yes (Included)
+                        </label>
+                        <label class="radio">
+                            <input type="radio" name="mess"> No
+                        </label>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <label>Hostel Facilities :</label>
+                    <div class="checkboxes">
+                        <label><input type="checkbox" checked> Wi-Fi</label>
+                        <label><input type="checkbox" checked> Laundry</label>
+                        <label><input type="checkbox" checked> Parking</label>
+                        <label><input type="checkbox" checked> 24/7 Security</label>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <label for="hostelQuery">Hostel Related Query :</label>
+                    <textarea id="hostelQuery" class="input_details" placeholder="Enter your query or maintenance request"></textarea>
+                </div>
+                <div class="form-row">
+                    <label>Comfortable with Hostel :</label>
+                    <div style="display: flex; gap: 20px;">
+                        <label class="radio">
+                            <input type="radio" name="comfortable" checked> Yes
+                        </label>
+                        <label class="radio">
+                            <input type="radio" name="comfortable"> No
+                        </label>
+                    </div>
+                </div>
+                <div class="hostel-buttons">
+                    <button type="submit">Save Hostel Details</button>
+                    <button type="reset" class="clear">Reset Changes</button>
+                </div>
+            </form>
+        </div>
+    </main>
+    <footer class="fot">
+        <p>CHARUSAT University © 2018 - 2026. All Rights Reserved. | <a href="feedback.html">Feedback & Support</a></p>
+    </footer>
+    <script src="../js/theme_nav.js"></script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+[
+  {
+    "id": 1,
+    "title": "Cognizance 2026 Tech Fest",
+    "category": "Technical",
+    "date": "2026-10-25",
+    "time": "09:00 AM",
+    "venue": "CSPIT Auditorium",
+    "seats": 80,
+    "registered": 62,
+    "organizer": "CSE Department",
+    "description": "Technical event with coding and robotics activities.",
+    "badge": "Featured"
+  },
+  {
+    "id": 2,
+    "title": "Sports Festival 2026",
+    "category": "Sports",
+    "date": "2026-10-12",
+    "time": "08:30 AM",
+    "venue": "University Sports Complex",
+    "seats": 60,
+    "registered": 42,
+    "organizer": "Sports Council",
+    "description": "Annual campus sports meet with multiple events.",
+    "badge": "Open"
+  },
+  {
+    "id": 3,
+    "title": "Web Development Bootcamp",
+    "category": "Workshop",
+    "date": "2026-11-05",
+    "time": "10:00 AM",
+    "venue": "DEPSTAR Lab 301",
+    "seats": 40,
+    "registered": 28,
+    "organizer": "GDSC",
+    "description": "Learn frontend and API integration in a practical workshop.",
+    "badge": "Open"
+  },
+  {
+    "id": 4,
+    "title": "Navratri Garba Celebration",
+    "category": "Cultural",
+    "date": "2026-10-18",
+    "time": "07:00 PM",
+    "venue": "Central Lawn",
+    "seats": 120,
+    "registered": 88,
+    "organizer": "Cultural Council",
+    "description": "Campus celebration with music, dance, and cultural performances.",
+    "badge": "Popular"
+  },
+  {
+    "id": 5,
+    "title": "Wellness Workshop",
+    "category": "Health",
+    "date": "2027-01-29",
+    "time": "06:30 AM",
+    "venue": "Open Amphitheatre",
+    "seats": 50,
+    "registered": 35,
+    "organizer": "Student Welfare Association",
+    "description": "A beginner-friendly yoga and wellness activity for students.",
+    "badge": "Open"
+  }
+]

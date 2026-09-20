@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus Events & Workshops | StudentHub Portal</title>
+    <link rel="stylesheet" href="../css/common.css">
+    <style>
+        .events-wrapper {
+            max-width: 1100px;
+            margin: 20px auto 40px;
+            padding: 0 15px;
+        }
+        /* Filter Toolbar */
+        .filter-toolbar {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-md);
+            padding: 16px 20px;
+            margin-bottom: 24px;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            gap: 14px;
+            box-shadow: var(--card-shadow);
+        }
+        .search-group {
+            flex: 1 1 260px;
+        }
+        .search-group input {
+            width: 100%;
+            padding: 10px 16px;
+            border-radius: var(--radius-sm);
+            border: 1px solid var(--border-color);
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            font-size: 14px;
+        }
+        .filter-controls-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            align-items: center;
+        }
+        .filter-select {
+            padding: 10px 14px;
+            border-radius: var(--radius-sm);
+            border: 1px solid var(--border-color);
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            font-size: 13px;
+            font-weight: 600;
+        }
+        /* Events Grid & Cards */
+        .events-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
+            gap: 22px;
+            margin-bottom: 30px;
+        }
+        .event-card {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-md);
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            box-shadow: var(--card-shadow);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .event-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--card-shadow-hover);
+        }
+        .event-card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 12px;
+        }
+        .event-category-badge {
+            color: #ffffff;
+            font-size: 11px;
+            font-weight: 700;
+            padding: 3px 10px;
+            border-radius: 20px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .event-status-badge {
+            background-color: var(--bg-secondary);
+            color: var(--text-secondary);
+            font-size: 11px;
+            font-weight: 600;
+            padding: 3px 8px;
+            border-radius: 4px;
+            border: 1px solid var(--border-color);
+        }
+        .event-title {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin: 0 0 8px;
+            line-height: 1.35;
+        }
+        .event-desc {
+            font-size: 13px;
+            color: var(--text-secondary);
+            line-height: 1.5;
+            margin: 0 0 16px;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+        .event-meta-info {
+            background-color: var(--bg-primary);
+            padding: 12px;
+            border-radius: var(--radius-sm);
+            font-size: 12px;
+            margin-bottom: 16px;
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            border: 1px solid var(--border-color);
+        }
+        .meta-row {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 4px;
+        }
+        .event-card-actions {
+            display: flex;
+            gap: 10px;
+        }
+        .event-card-actions .btn {
+            flex: 1;
+            font-size: 13px;
+            padding: 8px 10px;
+        }
+        /* Pagination Controls */
+        .pagination-wrap {
+            display: flex;
+            justify-content: center;
+            gap: 6px;
+            margin-top: 25px;
+        }
+        .pagination-btn {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            color: var(--text-primary);
+            padding: 8px 14px;
+            font-size: 13px;
+            font-weight: 600;
+            border-radius: var(--radius-sm);
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+        .pagination-btn:hover:not(:disabled) {
+            background-color: var(--primary-accent);
+            color: #ffffff;
+            border-color: var(--primary-accent);
+        }
+        .pagination-btn.active {
+            background-color: var(--primary-accent);
+            color: #ffffff;
+            border-color: var(--primary-accent);
+        }
+        .pagination-btn:disabled {
+            opacity: 0.4;
+            cursor: not-allowed;
+        }
+    </style>
+</head>
+<body>
+    <a href="#main" class="skip-link">Skip to Content</a>
+    <div id="text">
+        <a class="brand" href="../index.html">
+            <img src="../image/charusat_logo.png" alt="CHARUSAT logo">
+            <span>Student Hub Portal</span>
+        </a>
+    </div>
+    <div id="space"></div>
+    <div id="nav">
+        <nav>
+            <a href="../index.html" class="input">Home</a>
+            <a href="main_page.html" class="input">Profile</a>
+            <a href="family.html" class="input">Family detail</a>
+            <a href="semester_result.html" class="input">Semester result</a>
+            <a href="Student_attendance.html" class="input">Attendance</a>
+            <a href="Student_hostel.html" class="input">Student hostel</a>
+            <a href="Student_Payment.html" class="input">Payment detail</a>
+            <a href="Student_time-table.html" class="input">Time - table</a>
+            <a href="course_details.html" class="input">Course</a>
+            <a href="events.html" class="input active">Events</a>
+            <a href="faq.html" class="input">FAQ</a>
+            <a href="register.html" class="input">Register</a>
+            <a href="feedback.html" class="input">Feedback</a>
+        </nav>
+    </div>
+    <div class="breadcrumb">
+        <a href="../index.html">Home</a> / Campus Events & Hackathons
+    </div>
+    <main id="main">
+        <div class="events-wrapper">
+            <div id="title" style="margin-bottom: 8px;">
+                Campus Events & Hackathons
+            </div>
+            <p style="text-align: center; color: var(--text-secondary); font-size: 14px; margin-top: 0; margin-bottom: 25px;">
+                Practical 6: Dynamic Data Rendering using JavaScript Fetch API with Live Search, Filter, Sort & Pagination
+            </p>
+            <section class="filter-toolbar" aria-label="Events Filter and Search Bar">
+                <div class="search-group">
+                    <input type="text"
+                           id="eventSearchInput"
+                           placeholder="🔍 Search events by title, organizer, or venue..."
+                           aria-label="Search events">
+                </div>
+                <div class="filter-controls-group">
+                    <select id="eventCategorySelect" class="filter-select" aria-label="Filter events by category">
+                        <option value="ALL">All Categories</option>
+                    </select>
+                    <select id="eventSortSelect" class="filter-select" aria-label="Sort events">
+                        <option value="date_asc">Date: Upcoming First</option>
+                        <option value="date_desc">Date: Latest First</option>
+                        <option value="title_asc">Title: A to Z</option>
+                        <option value="seats_desc">Available Seats</option>
+                    </select>
+                    <button id="retryFetchBtn" class="btn btn-secondary" style="font-size: 13px; padding: 8px 12px;">🔄 Reload</button>
+                </div>
+            </section>
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px;">
+                <span id="totalResultsCount" style="font-size: 13px; font-weight: bold; color: var(--text-secondary);">Loading events...</span>
+            </div>
+            <div id="eventsLoading" style="text-align: center; padding: 40px;">
+                <p style="color: var(--text-secondary); font-size: 14px;">Loading Campus Events...</p>
+            </div>
+            <div id="eventsError" class="portal-card" style="display: none; background: rgba(220, 38, 38, 0.1); color: var(--danger); text-align: center; margin-bottom: 20px;">
+            </div>
+            <div id="eventsContainer" class="events-grid" aria-live="polite">
+            </div>
+            <div id="paginationControls" class="pagination-wrap" aria-label="Events pagination">
+            </div>
+        </div>
+    </main>
+    <div id="eventDetailsModal" class="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="modalEventTitle">
+        <div class="modal-box">
+            <button class="modal-close-btn" aria-label="Close Modal">&times;</button>
+            <div style="margin-bottom: 12px;">
+                <span id="modalEventCategory" class="event-category-badge" style="background-color: var(--primary-accent);">Category</span>
+            </div>
+            <h3 id="modalEventTitle" style="margin: 0 0 14px; font-size: 20px; color: var(--text-primary);">Event Title</h3>
+            <div class="event-meta-info" style="margin-bottom: 16px;">
+                <div class="meta-row"><span><strong>📅 Date:</strong> <span id="modalEventDate"></span></span></div>
+                <div class="meta-row"><span><strong>⏰ Time:</strong> <span id="modalEventTime"></span></span></div>
+                <div class="meta-row"><span><strong>📍 Venue:</strong> <span id="modalEventVenue"></span></span></div>
+                <div class="meta-row"><span><strong>👥 Organizer:</strong> <span id="modalEventOrganizer"></span></span></div>
+                <div class="meta-row"><span><strong>🎟️ Seats:</strong> <span id="modalEventSeats"></span></span></div>
+            </div>
+            <p id="modalEventDesc" style="font-size: 14px; line-height: 1.6; color: var(--text-secondary); margin-bottom: 24px;"></p>
+            <div style="display: flex; justify-content: flex-end; gap: 10px;">
+                <button class="btn btn-secondary modal-close-btn-action">Close</button>
+                <button id="modalConfirmRegisterBtn" class="btn btn-primary">Confirm Registration</button>
+            </div>
+        </div>
+    </div>
+    <footer class="fot">
+        <p>CHARUSAT University © 2018 - 2026. All Rights Reserved. | <a href="feedback.html">Feedback & Support</a></p>
+    </footer>
+    <script src="../js/theme_nav.js"></script>
+    <script src="../js/events_fetch.js"></script>
+</body>
+</html>

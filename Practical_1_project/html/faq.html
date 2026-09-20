@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frequently Asked Questions (FAQ) | StudentHub Portal</title>
+    <link rel="stylesheet" href="../css/common.css">
+    <style>
+        .faq-wrapper {
+            max-width: 920px;
+            margin: 20px auto 40px;
+            padding: 0 15px;
+        }
+        /* Search & Tab Filters */
+        .faq-search-box {
+            margin-bottom: 20px;
+        }
+        .faq-search-box input {
+            width: 100%;
+            padding: 12px 18px;
+            font-size: 15px;
+            border-radius: var(--radius-sm);
+            border: 1px solid var(--border-color);
+            background-color: var(--bg-card);
+            color: var(--text-primary);
+            box-shadow: var(--card-shadow);
+        }
+        .faq-tabs-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 24px;
+        }
+        .faq-tab-btn {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            color: var(--text-secondary);
+            padding: 8px 18px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+        .faq-tab-btn:hover {
+            background-color: var(--bg-secondary);
+            color: var(--text-primary);
+        }
+        .faq-tab-btn.active {
+            background-color: #1b82c6;
+            color: #ffffff;
+            border-color: #1b82c6;
+        }
+        /* Accordion Structure */
+        .faq-accordion-container {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        .faq-accordion-item {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            box-shadow: var(--card-shadow);
+            transition: box-shadow 0.2s ease;
+        }
+        .faq-accordion-item:hover {
+            box-shadow: var(--card-shadow-hover);
+        }
+        .faq-question-btn {
+            width: 100%;
+            padding: 16px 20px;
+            background: transparent;
+            border: none;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+            cursor: pointer;
+            text-align: left;
+            color: var(--text-primary);
+            font-size: 15px;
+            font-weight: 600;
+            transition: background-color 0.2s;
+        }
+        .faq-question-btn:hover {
+            background-color: rgba(27, 130, 198, 0.05);
+        }
+        .faq-question-btn[aria-expanded="true"] {
+            background-color: rgba(27, 130, 198, 0.08);
+            color: var(--primary-accent);
+        }
+        .faq-question-text {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+        .faq-badge {
+            background-color: #03398a;
+            color: #ffffff;
+            font-size: 11px;
+            padding: 3px 10px;
+            border-radius: 4px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .faq-icon {
+            font-size: 20px;
+            font-weight: bold;
+            color: var(--primary-accent);
+            line-height: 1;
+            min-width: 20px;
+            text-align: center;
+        }
+        .faq-answer-panel {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s cubic-bezier(0, 1, 0, 1);
+            background-color: var(--bg-card);
+        }
+        .faq-answer-content {
+            padding: 14px 20px 18px 20px;
+            font-size: 14px;
+            color: var(--text-secondary);
+            line-height: 1.6;
+            border-top: 1px solid var(--border-color);
+        }
+        .support-box {
+            margin-top: 35px;
+            text-align: center;
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-md);
+            padding: 24px;
+            box-shadow: var(--card-shadow);
+        }
+    </style>
+</head>
+<body>
+    <a href="#main" class="skip-link">Skip to Content</a>
+    <div id="text">
+        <a class="brand" href="../index.html">
+            <img src="../image/charusat_logo.png" alt="CHARUSAT logo">
+            <span>Student Hub Portal</span>
+        </a>
+    </div>
+    <div id="space"></div>
+    <div id="nav">
+        <nav>
+            <a href="../index.html" class="input">Home</a>
+            <a href="main_page.html" class="input">Profile</a>
+            <a href="family.html" class="input">Family detail</a>
+            <a href="semester_result.html" class="input">Semester result</a>
+            <a href="Student_attendance.html" class="input">Attendance</a>
+            <a href="Student_hostel.html" class="input">Student hostel</a>
+            <a href="Student_Payment.html" class="input">Payment detail</a>
+            <a href="Student_time-table.html" class="input">Time - table</a>
+            <a href="course_details.html" class="input">Course</a>
+            <a href="events.html" class="input">Events</a>
+            <a href="faq.html" class="input active">FAQ</a>
+            <a href="register.html" class="input">Register</a>
+            <a href="feedback.html" class="input">Feedback</a>
+        </nav>
+    </div>
+    <div class="breadcrumb">
+        <a href="../index.html">Home</a> / Frequently Asked Questions (FAQ)
+    </div>
+    <main id="main">
+        <div class="faq-wrapper">
+            <div id="title" style="margin-bottom: 8px;">
+                Frequently Asked Questions (FAQ)
+            </div>
+            <p style="text-align: center; color: var(--text-secondary); font-size: 14px; margin-top: 0; margin-bottom: 25px;">
+                Practical 4 & 6: Collapsible JavaScript Accordion Component with Fetch API & Offline Resiliency
+            </p>
+            <div class="faq-search-box">
+                <input type="text"
+                       id="faqSearchInput"
+                       placeholder="🔍 Search questions, academic rules, fees, hostel queries..."
+                       aria-label="Search FAQs">
+            </div>
+            <div id="faqCategoryTabs" class="faq-tabs-row" aria-label="FAQ Topics Filter">
+            </div>
+            <div id="faqLoading" style="text-align: center; padding: 25px;">
+                <p style="color: var(--text-secondary); font-size: 14px;">Loading FAQs...</p>
+            </div>
+            <div id="faqCount" style="font-size: 13px; font-weight: bold; margin-bottom: 12px; color: var(--text-secondary);"></div>
+            <div id="faqAccordionContainer" class="faq-accordion-container" aria-live="polite">
+            </div>
+            <div class="support-box">
+                <h3 style="color: var(--text-primary); margin: 0 0 8px;">Still have questions?</h3>
+                <p style="color: var(--text-secondary); font-size: 14px; margin: 0 0 16px;">Our student assistance team and university coordinators are here to assist you.</p>
+                <a href="feedback.html" class="btn btn-primary">Contact Support / Submit Feedback &rarr;</a>
+            </div>
+        </div>
+    </main>
+    <footer class="fot">
+        <p>CHARUSAT University © 2018 - 2026. All Rights Reserved. | <a href="feedback.html">Feedback & Support</a></p>
+    </footer>
+    <script src="../js/theme_nav.js"></script>
+    <script src="../js/faq_accordion.js"></script>
+</body>
+</html>
