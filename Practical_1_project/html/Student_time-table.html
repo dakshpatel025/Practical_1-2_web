@@ -55,7 +55,6 @@
                     <button type="button" class="day-tab-btn" data-day="Wed">Wed</button>
                     <button type="button" class="day-tab-btn" data-day="Thu">Thu</button>
                     <button type="button" class="day-tab-btn active" data-day="Fri">Fri (Today)</button>
-                    <button type="button" class="day-tab-btn" data-day="Sat">Sat</button>
                 </div>
             </div>
             <div class="timetable-card">
@@ -74,56 +73,7 @@
                                 <th>Attendance Status</th>
                             </tr>
                         </thead>
-                        <tbody id="timetableBody">
-                            <tr>
-                                <td><strong>09:10 - 10:09</strong></td>
-                                <td><strong>CEUE203</strong> - Object Oriented Programming</td>
-                                <td><span class="badge badge-info">Lecture</span> &nbsp; Room 302</td>
-                                <td>Prof. Hardik Vyas</td>
-                                <td><span class="badge badge-success">Present (P)</span></td>
-                            </tr>
-                            <tr>
-                                <td><strong>10:10 - 11:09</strong></td>
-                                <td><strong>CSUC201</strong> - Fundamentals of Data Structures</td>
-                                <td><span class="badge badge-info">Lecture</span> &nbsp; Room 302</td>
-                                <td>Prof. Anjali Patel</td>
-                                <td><span class="badge badge-success">Present (P)</span></td>
-                            </tr>
-                            <tr>
-                                <td><strong>11:10 - 12:10</strong></td>
-                                <td colspan="4" style="text-align: center;">
-                                    ☕ Campus Lunch & Recess Break
-                                </td>
-                            </tr>
-                            <tr>
-                                <td><strong>12:10 - 13:09</strong></td>
-                                <td><strong>ITUC201</strong> - Fundamentals of Computer Networks</td>
-                                <td><span class="badge badge-info">Lecture</span> &nbsp; Room 304</td>
-                                <td>Dr. Nilesh Modi</td>
-                                <td><span class="badge badge-success">Present (P)</span></td>
-                            </tr>
-                            <tr>
-                                <td><strong>13:09 - 14:10</strong></td>
-                                <td><strong>ITUE203</strong> - Web Development Frameworks</td>
-                                <td><span class="badge badge-warning">Lab</span> &nbsp; Web Lab 2</td>
-                                <td>Prof. Bhavin Shah</td>
-                                <td><span class="badge badge-success">Present (P)</span></td>
-                            </tr>
-                            <tr>
-                                <td><strong>14:20 - 15:19</strong></td>
-                                <td><strong>MSUD203</strong> - Discrete Mathematics</td>
-                                <td><span class="badge badge-info">Lecture</span> &nbsp; Room 302</td>
-                                <td>Prof. Ritu Mehta</td>
-                                <td><span class="badge badge-danger">Absent (A)</span></td>
-                            </tr>
-                            <tr>
-                                <td><strong>15:20 - 16:20</strong></td>
-                                <td><strong>HSUV201</strong> - Critical Thinking & Problem Solving</td>
-                                <td><span class="badge badge-info">Lecture</span> &nbsp; Room 301</td>
-                                <td>Prof. Sanjay Patel</td>
-                                <td><span class="badge badge-warning">Not Taken (NT)</span></td>
-                            </tr>
-                        </tbody>
+                        <tbody id="timetableBody"></tbody>
                     </table>
                 </div>
                 <div class="timetable-legend">
@@ -137,7 +87,7 @@
                         <span class="badge badge-warning">NT</span> = Class Not Taken / Postponed
                     </div>
                     <div class="legend-item" style="margin-left: auto;">
-                        Total Lectures Scheduled: <strong>6 Sessions</strong>
+                        Total Lectures Scheduled: <strong id="totalSessionsLabel">6 Sessions</strong>
                     </div>
                 </div>
             </div>
@@ -148,19 +98,111 @@
     </footer>
     <script src="../js/theme_nav.js"></script>
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const tabs = document.querySelectorAll('.day-tab-btn');
+        document.addEventListener('DOMContentLoaded', async function () {
+            const dayTabs = document.querySelectorAll('.day-tab-btn');
+            const timetableBody = document.getElementById('timetableBody');
             const title = document.getElementById('currentDayScheduleTitle');
-            tabs.forEach(tab => {
-                tab.addEventListener('click', function () {
-                    tabs.forEach(t => t.classList.remove('active'));
-                    this.classList.add('active');
-                    const day = this.getAttribute('data-day');
-                    if (title) {
-                        title.textContent = `Schedule for ${day}day (${day === 'Fri' ? '18 Sept 2026' : 'Regular Weekly Slot'})`;
+            const scheduleDateInput = document.getElementById('scheduleDate');
+            const totalSessionsLabel = document.getElementById('totalSessionsLabel');
+
+            let timetableData = {};
+            const dayOrder = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri'];
+
+            function getStatusBadge(status) {
+                const lower = (status || '').toLowerCase();
+                if (lower.includes('present')) return '<span class="badge badge-success">Present (P)</span>';
+                if (lower.includes('absent')) return '<span class="badge badge-danger">Absent (A)</span>';
+                if (lower.includes('not taken') || lower.includes('postponed')) return '<span class="badge badge-warning">Not Taken (NT)</span>';
+                if (lower.includes('break')) return '<span class="badge badge-secondary">Break</span>';
+                return '<span class="badge badge-info">' + status + '</span>';
+            }
+
+            function getClassBadge(type) {
+                const lower = (type || '').toLowerCase();
+                if (lower === 'lab') return '<span class="badge badge-warning">Lab</span>';
+                if (lower === 'break') return '<span class="badge badge-secondary">Break</span>';
+                return '<span class="badge badge-info">Lecture</span>';
+            }
+
+            function formatDateLabel(dateStr) {
+                if (!dateStr) return 'Regular Weekly Slot';
+                const date = new Date(dateStr + 'T00:00:00');
+                return date.toLocaleDateString('en-GB', {
+                    day: 'numeric',
+                    month: 'short',
+                    year: 'numeric'
+                });
+            }
+
+            function renderSchedule(dayKey) {
+                const dayData = timetableData[dayKey];
+                if (!dayData || !Array.isArray(dayData.sessions)) {
+                    timetableBody.innerHTML = '<tr><td colspan="5" style="text-align:center;">No timetable available.</td></tr>';
+                    return;
+                }
+
+                timetableBody.innerHTML = dayData.sessions.map(session => {
+                    if (session.courseCode === 'BREAK') {
+                        return `
+                            <tr>
+                                <td><strong>${session.time}</strong></td>
+                                <td colspan="4" style="text-align: center;">${session.courseName}</td>
+                            </tr>
+                        `;
+                    }
+
+                    return `
+                        <tr>
+                            <td><strong>${session.time}</strong></td>
+                            <td><strong>${session.courseCode}</strong> - ${session.courseName}</td>
+                            <td>${getClassBadge(session.type)} &nbsp; ${session.venue}</td>
+                            <td>${session.faculty}</td>
+                            <td>${getStatusBadge(session.status)}</td>
+                        </tr>
+                    `;
+                }).join('');
+
+                const sessionCount = dayData.sessions.filter(s => s.courseCode !== 'BREAK').length;
+                totalSessionsLabel.textContent = `${sessionCount} Sessions`;
+
+                if (title) {
+                    title.textContent = `Schedule for ${dayData.label}, ${formatDateLabel(dayData.date)}`;
+                }
+
+                if (scheduleDateInput) {
+                    scheduleDateInput.value = dayData.date || '2026-09-18';
+                }
+            }
+
+            try {
+                const response = await fetch('../data/timetable.json');
+                if (!response.ok) throw new Error('JSON not found');
+                timetableData = await response.json();
+
+                const activeDay = dayOrder.includes('Fri') ? 'Fri' : dayOrder[0];
+                dayTabs.forEach(tab => {
+                    tab.addEventListener('click', function () {
+                        dayTabs.forEach(t => t.classList.remove('active'));
+                        this.classList.add('active');
+                        const selectedDay = this.getAttribute('data-day');
+                        renderSchedule(selectedDay);
+                    });
+                });
+
+                dayTabs.forEach(tab => {
+                    if (tab.getAttribute('data-day') === activeDay) {
+                        tab.classList.add('active');
                     }
                 });
-            });
+
+                renderSchedule(activeDay);
+            } catch (error) {
+                timetableBody.innerHTML = '<tr><td colspan="5" style="text-align:center;">Unable to load timetable data.</td></tr>';
+                if (title) {
+                    title.textContent = 'Schedule unavailable';
+                }
+                console.error('Timetable load failed:', error);
+            }
         });
     </script>
 </body>

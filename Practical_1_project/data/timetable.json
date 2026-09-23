@@ -1,0 +1,64 @@
+{
+  "Mon": {
+    "label": "Monday",
+    "date": "2026-09-14",
+    "sessions": [
+      { "time": "09:10 - 10:09", "courseCode": "CEUE203", "courseName": "Object Oriented Programming", "type": "Lecture", "venue": "Room 302", "faculty": "Prof. Hardik Vyas", "status": "Present (P)" },
+      { "time": "10:10 - 11:09", "courseCode": "CSUC201", "courseName": "Fundamentals of Data Structures", "type": "Lecture", "venue": "Room 302", "faculty": "Prof. Anjali Patel", "status": "Present (P)" },
+      { "time": "11:10 - 12:10", "courseCode": "BREAK", "courseName": "Campus Lunch & Recess Break", "type": "Break", "venue": "Campus", "faculty": "-", "status": "Break" },
+      { "time": "12:10 - 13:09", "courseCode": "ITUC201", "courseName": "Fundamentals of Computer Networks", "type": "Lecture", "venue": "Room 304", "faculty": "Dr. Nilesh Modi", "status": "Present (P)" },
+      { "time": "13:09 - 14:10", "courseCode": "ITUE203", "courseName": "Web Development Frameworks", "type": "Lab", "venue": "Web Lab 2", "faculty": "Prof. Bhavin Shah", "status": "Present (P)" },
+      { "time": "14:20 - 15:19", "courseCode": "MSUD203", "courseName": "Discrete Mathematics", "type": "Lecture", "venue": "Room 302", "faculty": "Prof. Ritu Mehta", "status": "Absent (A)" },
+      { "time": "15:20 - 16:20", "courseCode": "HSUV201", "courseName": "Critical Thinking & Problem Solving", "type": "Lecture", "venue": "Room 301", "faculty": "Prof. Sanjay Patel", "status": "Not Taken (NT)" }
+    ]
+  },
+  "Tue": {
+    "label": "Tuesday",
+    "date": "2026-09-15",
+    "sessions": [
+      { "time": "09:10 - 10:09", "courseCode": "ECUE201", "courseName": "Digital Electronics", "type": "Lecture", "venue": "Room 205", "faculty": "Dr. Kiran Shah", "status": "Present (P)" },
+      { "time": "10:10 - 11:09", "courseCode": "CSUC202", "courseName": "Operating Systems", "type": "Lecture", "venue": "Room 205", "faculty": "Prof. Meera Joshi", "status": "Present (P)" },
+      { "time": "11:10 - 12:10", "courseCode": "BREAK", "courseName": "Campus Lunch & Recess Break", "type": "Break", "venue": "Campus", "faculty": "-", "status": "Break" },
+      { "time": "12:10 - 13:09", "courseCode": "CEUE204", "courseName": "Computer Graphics", "type": "Lecture", "venue": "Room 305", "faculty": "Prof. Disha Trivedi", "status": "Present (P)" },
+      { "time": "13:09 - 14:10", "courseCode": "CSUC206", "courseName": "Data Structures Lab", "type": "Lab", "venue": "Programming Lab 1", "faculty": "Prof. Kunal Shah", "status": "Present (P)" },
+      { "time": "14:20 - 15:19", "courseCode": "HSUV202", "courseName": "Communication Skills", "type": "Lecture", "venue": "Room 202", "faculty": "Dr. Vishal Amin", "status": "Present (P)" }
+    ]
+  },
+  "Wed": {
+    "label": "Wednesday",
+    "date": "2026-09-16",
+    "sessions": [
+      { "time": "09:10 - 10:09", "courseCode": "CSUC201", "courseName": "Fundamentals of Data Structures", "type": "Lecture", "venue": "Room 302", "faculty": "Prof. Anjali Patel", "status": "Present (P)" },
+      { "time": "10:10 - 11:09", "courseCode": "ICUC201", "courseName": "Engineering Mathematics", "type": "Lecture", "venue": "Room 303", "faculty": "Dr. Priti Desai", "status": "Present (P)" },
+      { "time": "11:10 - 12:10", "courseCode": "BREAK", "courseName": "Campus Lunch & Recess Break", "type": "Break", "venue": "Campus", "faculty": "-", "status": "Break" },
+      { "time": "12:10 - 13:09", "courseCode": "CEUE203", "courseName": "Object Oriented Programming", "type": "Lecture", "venue": "Room 302", "faculty": "Prof. Hardik Vyas", "status": "Present (P)" },
+      { "time": "13:09 - 14:10", "courseCode": "ITUE203", "courseName": "Web Development Frameworks", "type": "Lab", "venue": "Web Lab 2", "faculty": "Prof. Bhavin Shah", "status": "Absent (A)" },
+      { "time": "14:20 - 15:19", "courseCode": "ITUC201", "courseName": "Fundamentals of Computer Networks", "type": "Lecture", "venue": "Room 304", "faculty": "Dr. Nilesh Modi", "status": "Present (P)" }
+    ]
+  },
+  "Thu": {
+    "label": "Thursday",
+    "date": "2026-09-17",
+    "sessions": [
+      { "time": "09:10 - 10:09", "courseCode": "SSUC201", "courseName": "Software Engineering", "type": "Lecture", "venue": "Room 405", "faculty": "Prof. Hiral Shah", "status": "Present (P)" },
+      { "time": "10:10 - 11:09", "courseCode": "MSUD203", "courseName": "Discrete Mathematics", "type": "Lecture", "venue": "Room 302", "faculty": "Prof. Ritu Mehta", "status": "Present (P)" },
+      { "time": "11:10 - 12:10", "courseCode": "BREAK", "courseName": "Campus Lunch & Recess Break", "type": "Break", "venue": "Campus", "faculty": "-", "status": "Break" },
+      { "time": "12:10 - 13:09", "courseCode": "CTUE201", "courseName": "Computer Organization", "type": "Lecture", "venue": "Room 306", "faculty": "Dr. Nilam Shah", "status": "Present (P)" },
+      { "time": "13:09 - 14:10", "courseCode": "SSUE201", "courseName": "Software Engineering Lab", "type": "Lab", "venue": "Software Lab 3", "faculty": "Prof. Kamal Patel", "status": "Present (P)" },
+      { "time": "14:20 - 15:19", "courseCode": "HSUV201", "courseName": "Critical Thinking & Problem Solving", "type": "Lecture", "venue": "Room 301", "faculty": "Prof. Sanjay Patel", "status": "Not Taken (NT)" }
+    ]
+  },
+  "Fri": {
+    "label": "Friday",
+    "date": "2026-09-18",
+    "sessions": [
+      { "time": "09:10 - 10:09", "courseCode": "CEUE203", "courseName": "Object Oriented Programming", "type": "Lecture", "venue": "Room 302", "faculty": "Prof. Hardik Vyas", "status": "Present (P)" },
+      { "time": "10:10 - 11:09", "courseCode": "CSUC201", "courseName": "Fundamentals of Data Structures", "type": "Lecture", "venue": "Room 302", "faculty": "Prof. Anjali Patel", "status": "Present (P)" },
+      { "time": "11:10 - 12:10", "courseCode": "BREAK", "courseName": "Campus Lunch & Recess Break", "type": "Break", "venue": "Campus", "faculty": "-", "status": "Break" },
+      { "time": "12:10 - 13:09", "courseCode": "ITUC201", "courseName": "Fundamentals of Computer Networks", "type": "Lecture", "venue": "Room 304", "faculty": "Dr. Nilesh Modi", "status": "Present (P)" },
+      { "time": "13:09 - 14:10", "courseCode": "ITUE203", "courseName": "Web Development Frameworks", "type": "Lab", "venue": "Web Lab 2", "faculty": "Prof. Bhavin Shah", "status": "Present (P)" },
+      { "time": "14:20 - 15:19", "courseCode": "MSUD203", "courseName": "Discrete Mathematics", "type": "Lecture", "venue": "Room 302", "faculty": "Prof. Ritu Mehta", "status": "Absent (A)" },
+      { "time": "15:20 - 16:20", "courseCode": "HSUV201", "courseName": "Critical Thinking & Problem Solving", "type": "Lecture", "venue": "Room 301", "faculty": "Prof. Sanjay Patel", "status": "Not Taken (NT)" }
+    ]
+  }
+}

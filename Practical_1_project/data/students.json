@@ -1,57 +1,475 @@
 [
   {
     "id": "24DCS001",
+    "password": "24DCS001@123",
     "name": "Daksh Patel",
     "course": "B.Tech Computer Science",
+    "degree": "B.Tech CSE",
     "institute": "DEPSTAR",
     "semester": 4,
     "cgpa": 9.42,
     "email": "24dcs001@charusat.edu.in",
     "city": "Ahmedabad",
-    "status": "Active"
+    "birthDate": "2006-05-14",
+    "birthPlace": "Ahmedabad",
+    "gender": "Male",
+    "status": "Active",
+    "father": {
+      "name": "Kamleshbhai M. Patel",
+      "mobile": "9825012345",
+      "occupation": "Business"
+    },
+    "mother": {
+      "name": "Bhavnaben K. Patel",
+      "mobile": "9825067890",
+      "occupation": "Homemaker"
+    },
+    "hostel": {
+      "name": "CHARUSAT Campus Hostel Block A",
+      "address": "CHARUSAT Campus, Changa - 388421",
+      "contact": "9876543210",
+      "type": "College Hostel",
+      "roomNumber": "A-312",
+      "roomType": "Double Sharing",
+      "ownerName": "Rameshbhai S. Patel",
+      "ownerMobile": "9824056789",
+      "wardenName": "Pravinbhai Vankar",
+      "wardenMobile": "9879512340",
+      "monthlyFees": 6500,
+      "messIncluded": true,
+      "facilities": ["Wi-Fi", "Laundry", "Parking", "24/7 Security"]
+    },
+    "payment": {
+      "totalAcademicFees": 390000,
+      "feesPaid": 260000,
+      "pendingDues": 130000,
+      "scholarshipReceived": 50000,
+      "semesters": [
+        { "name": "Semester 1", "total": 65000, "paid": 65000, "pending": 0, "scholarship": 25000 },
+        { "name": "Semester 2", "total": 65000, "paid": 65000, "pending": 0, "scholarship": 0 },
+        { "name": "Semester 3", "total": 65000, "paid": 65000, "pending": 0, "scholarship": 25000 },
+        { "name": "Semester 4", "total": 65000, "paid": 65000, "pending": 0, "scholarship": 0 },
+        { "name": "Semester 5", "total": 65000, "paid": 0, "pending": 65000, "scholarship": 0 },
+        { "name": "Semester 6", "total": 65000, "paid": 0, "pending": 65000, "scholarship": 0 }
+      ]
+    },
+    "attendance": {
+      "totalClasses": 242,
+      "presentCount": 209,
+      "grossPercentage": 86.4,
+      "examStatus": "Eligible (≥ 80%)",
+      "courses": [
+        { "code": "CEUE203", "title": "Object Oriented Programming", "type": "LECTURE", "present": 32, "total": 36, "percentage": 88.9 },
+        { "code": "CEUE203", "title": "Object Oriented Programming", "type": "LAB", "present": 16, "total": 18, "percentage": 88.9 },
+        { "code": "CSUC201", "title": "Fundamentals of Data Structures", "type": "LECTURE", "present": 34, "total": 38, "percentage": 89.5 },
+        { "code": "CSUC201", "title": "Fundamentals of Data Structures", "type": "LAB", "present": 18, "total": 20, "percentage": 90.0 },
+        { "code": "HSUV201", "title": "Critical Thinking & Problem Solving", "type": "LECTURE", "present": 24, "total": 28, "percentage": 85.7 },
+        { "code": "ITUC201", "title": "Fundamentals of Computer Networks", "type": "LECTURE", "present": 30, "total": 36, "percentage": 83.3 },
+        { "code": "ITUC201", "title": "Fundamentals of Computer Networks", "type": "LAB", "present": 15, "total": 18, "percentage": 83.3 },
+        { "code": "ITUE203", "title": "Web Development Frameworks", "type": "LECTURE", "present": 31, "total": 34, "percentage": 91.2 },
+        { "code": "ITUE203", "title": "Web Development Frameworks", "type": "LAB", "present": 17, "total": 18, "percentage": 94.4 },
+        { "code": "MSUD203", "title": "Discrete Mathematics", "type": "LECTURE", "present": 28, "total": 34, "percentage": 82.4 }
+      ]
+    },
+    "result": {
+      "cumulativeCGPA": 9.42,
+      "creditsEarned": "69.0 / 69.0",
+      "semestersCompleted": "3 of 8",
+      "classification": "Distinction (Top 5%)",
+      "records": [
+        { "semester": "Semester 1", "session": "December 2024", "registeredCredits": "23.0", "earnedCredits": "23.0", "sgpa": "9.35", "status": "Passed (Distinction)" },
+        { "semester": "Semester 2", "session": "May 2025", "registeredCredits": "23.0", "earnedCredits": "23.0", "sgpa": "9.40", "status": "Passed (Distinction)" },
+        { "semester": "Semester 3", "session": "December 2025", "registeredCredits": "23.0", "earnedCredits": "23.0", "sgpa": "9.50", "status": "Passed (Distinction)" },
+        { "semester": "Semester 4", "session": "May 2026", "registeredCredits": "23.0", "earnedCredits": "—", "sgpa": "In Progress", "status": "Term Active" }
+      ]
+    }
   },
   {
     "id": "24DCS002",
+    "password": "24DCS002@123",
     "name": "Aarav Shah",
     "course": "B.Tech Computer Science",
+    "degree": "B.Tech CSE",
     "institute": "DEPSTAR",
     "semester": 4,
     "cgpa": 8.85,
     "email": "24dcs002@charusat.edu.in",
     "city": "Vadodara",
-    "status": "Active"
+    "birthDate": "2006-02-18",
+    "birthPlace": "Vadodara",
+    "gender": "Male",
+    "status": "Active",
+    "father": {
+      "name": "Rajatbhai D. Shah",
+      "mobile": "9876501234",
+      "occupation": "Manager"
+    },
+    "mother": {
+      "name": "Nisha D. Shah",
+      "mobile": "9876505678",
+      "occupation": "Teacher"
+    },
+    "hostel": {
+      "name": "CHARUSAT Campus Hostel Block B",
+      "address": "CHARUSAT Campus, Changa - 388421",
+      "contact": "9876543333",
+      "type": "College Hostel",
+      "roomNumber": "B-204",
+      "roomType": "Double Sharing",
+      "ownerName": "Dipakbhai R. Shah",
+      "ownerMobile": "9876544444",
+      "wardenName": "Manishaben Patel",
+      "wardenMobile": "9876587654",
+      "monthlyFees": 6800,
+      "messIncluded": true,
+      "facilities": ["Wi-Fi", "Laundry", "Study Hall", "Security"]
+    },
+    "payment": {
+      "totalAcademicFees": 390000,
+      "feesPaid": 250000,
+      "pendingDues": 140000,
+      "scholarshipReceived": 30000,
+      "semesters": [
+        { "name": "Semester 1", "total": 65000, "paid": 65000, "pending": 0, "scholarship": 15000 },
+        { "name": "Semester 2", "total": 65000, "paid": 65000, "pending": 0, "scholarship": 0 },
+        { "name": "Semester 3", "total": 65000, "paid": 65000, "pending": 0, "scholarship": 15000 },
+        { "name": "Semester 4", "total": 65000, "paid": 70000, "pending": 0, "scholarship": 0 },
+        { "name": "Semester 5", "total": 65000, "paid": 0, "pending": 65000, "scholarship": 0 },
+        { "name": "Semester 6", "total": 65000, "paid": 0, "pending": 65000, "scholarship": 0 }
+      ]
+    },
+    "attendance": {
+      "totalClasses": 226,
+      "presentCount": 188,
+      "grossPercentage": 83.2,
+      "examStatus": "Eligible (≥ 80%)",
+      "courses": [
+        { "code": "CEUE203", "title": "Object Oriented Programming", "type": "LECTURE", "present": 29, "total": 34, "percentage": 85.3 },
+        { "code": "CSUC201", "title": "Fundamentals of Data Structures", "type": "LECTURE", "present": 30, "total": 36, "percentage": 83.3 },
+        { "code": "ITUC201", "title": "Fundamentals of Computer Networks", "type": "LECTURE", "present": 27, "total": 34, "percentage": 79.4 },
+        { "code": "ITUE203", "title": "Web Development Frameworks", "type": "LAB", "present": 16, "total": 18, "percentage": 88.9 },
+        { "code": "MSUD203", "title": "Discrete Mathematics", "type": "LECTURE", "present": 25, "total": 30, "percentage": 83.3 }
+      ]
+    },
+    "result": {
+      "cumulativeCGPA": 8.85,
+      "creditsEarned": "69.0 / 69.0",
+      "semestersCompleted": "3 of 8",
+      "classification": "First Class",
+      "records": [
+        { "semester": "Semester 1", "session": "December 2024", "registeredCredits": "23.0", "earnedCredits": "23.0", "sgpa": "8.65", "status": "Passed" },
+        { "semester": "Semester 2", "session": "May 2025", "registeredCredits": "23.0", "earnedCredits": "23.0", "sgpa": "8.72", "status": "Passed" },
+        { "semester": "Semester 3", "session": "December 2025", "registeredCredits": "23.0", "earnedCredits": "23.0", "sgpa": "8.90", "status": "Passed" },
+        { "semester": "Semester 4", "session": "May 2026", "registeredCredits": "23.0", "earnedCredits": "—", "sgpa": "In Progress", "status": "Term Active" }
+      ]
+    }
   },
   {
     "id": "24DCS003",
+    "password": "24DCS003@123",
     "name": "Ananya Sharma",
     "course": "B.Tech Information Technology",
+    "degree": "B.Tech IT",
     "institute": "CSPIT",
     "semester": 4,
     "cgpa": 9.15,
     "email": "24dcs003@charusat.edu.in",
     "city": "Surat",
-    "status": "Active"
+    "birthDate": "2006-08-02",
+    "birthPlace": "Surat",
+    "gender": "Female",
+    "status": "Active",
+    "father": {
+      "name": "Rakeshbhai P. Sharma",
+      "mobile": "9876598765",
+      "occupation": "Civil Engineer"
+    },
+    "mother": {
+      "name": "Meena P. Sharma",
+      "mobile": "9876591234",
+      "occupation": "Doctor"
+    },
+    "hostel": {
+      "name": "CHARUSAT Campus Hostel Block C",
+      "address": "CHARUSAT Campus, Changa - 388421",
+      "contact": "9876541111",
+      "type": "College Hostel",
+      "roomNumber": "C-118",
+      "roomType": "Single Sharing",
+      "ownerName": "Ashokbhai K. Sharma",
+      "ownerMobile": "9876542222",
+      "wardenName": "Nitinbhai Joshi",
+      "wardenMobile": "9876545555",
+      "monthlyFees": 7000,
+      "messIncluded": true,
+      "facilities": ["Wi-Fi", "Laundry", "Gym", "Security"]
+    },
+    "payment": {
+      "totalAcademicFees": 390000,
+      "feesPaid": 285000,
+      "pendingDues": 105000,
+      "scholarshipReceived": 60000,
+      "semesters": [
+        { "name": "Semester 1", "total": 65000, "paid": 65000, "pending": 0, "scholarship": 20000 },
+        { "name": "Semester 2", "total": 65000, "paid": 65000, "pending": 0, "scholarship": 0 },
+        { "name": "Semester 3", "total": 65000, "paid": 65000, "pending": 0, "scholarship": 20000 },
+        { "name": "Semester 4", "total": 65000, "paid": 65000, "pending": 0, "scholarship": 20000 },
+        { "name": "Semester 5", "total": 65000, "paid": 0, "pending": 65000, "scholarship": 0 },
+        { "name": "Semester 6", "total": 65000, "paid": 0, "pending": 65000, "scholarship": 0 }
+      ]
+    },
+    "attendance": {
+      "totalClasses": 238,
+      "presentCount": 214,
+      "grossPercentage": 90.0,
+      "examStatus": "Eligible (≥ 80%)",
+      "courses": [
+        { "code": "ITUC201", "title": "Fundamentals of Computer Networks", "type": "LECTURE", "present": 33, "total": 36, "percentage": 91.7 },
+        { "code": "ITUE203", "title": "Web Development Frameworks", "type": "LAB", "present": 17, "total": 18, "percentage": 94.4 },
+        { "code": "HSUV201", "title": "Critical Thinking & Problem Solving", "type": "LECTURE", "present": 26, "total": 28, "percentage": 92.9 },
+        { "code": "MSUD203", "title": "Discrete Mathematics", "type": "LECTURE", "present": 30, "total": 34, "percentage": 88.2 }
+      ]
+    },
+    "result": {
+      "cumulativeCGPA": 9.15,
+      "creditsEarned": "69.0 / 69.0",
+      "semestersCompleted": "3 of 8",
+      "classification": "Distinction",
+      "records": [
+        { "semester": "Semester 1", "session": "December 2024", "registeredCredits": "23.0", "earnedCredits": "23.0", "sgpa": "9.05", "status": "Passed (Distinction)" },
+        { "semester": "Semester 2", "session": "May 2025", "registeredCredits": "23.0", "earnedCredits": "23.0", "sgpa": "9.10", "status": "Passed (Distinction)" },
+        { "semester": "Semester 3", "session": "December 2025", "registeredCredits": "23.0", "earnedCredits": "23.0", "sgpa": "9.20", "status": "Passed (Distinction)" },
+        { "semester": "Semester 4", "session": "May 2026", "registeredCredits": "23.0", "earnedCredits": "—", "sgpa": "In Progress", "status": "Term Active" }
+      ]
+    }
   },
   {
     "id": "24DCS004",
+    "password": "24DCS004@123",
     "name": "Rohan Mehta",
     "course": "B.Tech Computer Engineering",
+    "degree": "B.Tech CSE",
     "institute": "CSPIT",
     "semester": 4,
     "cgpa": 8.40,
     "email": "24dcs004@charusat.edu.in",
     "city": "Rajkot",
-    "status": "Active"
+    "birthDate": "2005-11-16",
+    "birthPlace": "Rajkot",
+    "gender": "Male",
+    "status": "Active",
+    "father": {
+      "name": "Dineshbhai H. Mehta",
+      "mobile": "9876512345",
+      "occupation": "Retired Officer"
+    },
+    "mother": {
+      "name": "Kavita H. Mehta",
+      "mobile": "9876519876",
+      "occupation": "Bank Employee"
+    },
+    "hostel": {
+      "name": "CHARUSAT Campus Hostel Block D",
+      "address": "CHARUSAT Campus, Changa - 388421",
+      "contact": "9876543334",
+      "type": "College Hostel",
+      "roomNumber": "D-227",
+      "roomType": "Double Sharing",
+      "ownerName": "Paragbhai R. Mehta",
+      "ownerMobile": "9876546666",
+      "wardenName": "Kiranben Shah",
+      "wardenMobile": "9876547777",
+      "monthlyFees": 6800,
+      "messIncluded": true,
+      "facilities": ["Wi-Fi", "Laundry", "Study Hall", "Security"]
+    },
+    "payment": {
+      "totalAcademicFees": 390000,
+      "feesPaid": 210000,
+      "pendingDues": 180000,
+      "scholarshipReceived": 25000,
+      "semesters": [
+        { "name": "Semester 1", "total": 65000, "paid": 65000, "pending": 0, "scholarship": 15000 },
+        { "name": "Semester 2", "total": 65000, "paid": 65000, "pending": 0, "scholarship": 10000 },
+        { "name": "Semester 3", "total": 65000, "paid": 80000, "pending": 0, "scholarship": 0 },
+        { "name": "Semester 4", "total": 65000, "paid": 0, "pending": 65000, "scholarship": 0 },
+        { "name": "Semester 5", "total": 65000, "paid": 0, "pending": 65000, "scholarship": 0 },
+        { "name": "Semester 6", "total": 65000, "paid": 0, "pending": 65000, "scholarship": 0 }
+      ]
+    },
+    "attendance": {
+      "totalClasses": 202,
+      "presentCount": 164,
+      "grossPercentage": 81.2,
+      "examStatus": "Eligible (≥ 80%)",
+      "courses": [
+        { "code": "CEUE203", "title": "Object Oriented Programming", "type": "LECTURE", "present": 28, "total": 34, "percentage": 82.4 },
+        { "code": "CSUC201", "title": "Fundamentals of Data Structures", "type": "LECTURE", "present": 29, "total": 36, "percentage": 80.6 },
+        { "code": "ITUC201", "title": "Fundamentals of Computer Networks", "type": "LECTURE", "present": 26, "total": 32, "percentage": 81.3 },
+        { "code": "ITUE203", "title": "Web Development Frameworks", "type": "LAB", "present": 14, "total": 18, "percentage": 77.8 }
+      ]
+    },
+    "result": {
+      "cumulativeCGPA": 8.40,
+      "creditsEarned": "69.0 / 69.0",
+      "semestersCompleted": "3 of 8",
+      "classification": "First Class",
+      "records": [
+        { "semester": "Semester 1", "session": "December 2024", "registeredCredits": "23.0", "earnedCredits": "23.0", "sgpa": "8.20", "status": "Passed" },
+        { "semester": "Semester 2", "session": "May 2025", "registeredCredits": "23.0", "earnedCredits": "23.0", "sgpa": "8.35", "status": "Passed" },
+        { "semester": "Semester 3", "session": "December 2025", "registeredCredits": "23.0", "earnedCredits": "23.0", "sgpa": "8.55", "status": "Passed" },
+        { "semester": "Semester 4", "session": "May 2026", "registeredCredits": "23.0", "earnedCredits": "—", "sgpa": "In Progress", "status": "Term Active" }
+      ]
+    }
   },
   {
     "id": "24DCS005",
+    "password": "24DCS005@123",
     "name": "Pooja Trivedi",
     "course": "BCA",
+    "degree": "BCA",
     "institute": "CMPICA",
     "semester": 2,
     "cgpa": 8.90,
     "email": "24bca005@charusat.edu.in",
     "city": "Anand",
-    "status": "Active"
+    "birthDate": "2006-03-09",
+    "birthPlace": "Anand",
+    "gender": "Female",
+    "status": "Active",
+    "father": {
+      "name": "Bhagyeshbhai J. Trivedi",
+      "mobile": "9876523456",
+      "occupation": "Accountant"
+    },
+    "mother": {
+      "name": "Hina J. Trivedi",
+      "mobile": "9876529876",
+      "occupation": "Homemaker"
+    },
+    "hostel": {
+      "name": "CHARUSAT Campus Hostel Block E",
+      "address": "CHARUSAT Campus, Changa - 388421",
+      "contact": "9876548888",
+      "type": "College Hostel",
+      "roomNumber": "E-109",
+      "roomType": "Double Sharing",
+      "ownerName": "Kiritbhai V. Trivedi",
+      "ownerMobile": "9876549999",
+      "wardenName": "Rakeshbhai Desai",
+      "wardenMobile": "9876541212",
+      "monthlyFees": 6200,
+      "messIncluded": true,
+      "facilities": ["Wi-Fi", "Laundry", "Security"]
+    },
+    "payment": {
+      "totalAcademicFees": 250000,
+      "feesPaid": 150000,
+      "pendingDues": 100000,
+      "scholarshipReceived": 20000,
+      "semesters": [
+        { "name": "Semester 1", "total": 50000, "paid": 50000, "pending": 0, "scholarship": 10000 },
+        { "name": "Semester 2", "total": 50000, "paid": 50000, "pending": 0, "scholarship": 10000 },
+        { "name": "Semester 3", "total": 50000, "paid": 0, "pending": 50000, "scholarship": 0 },
+        { "name": "Semester 4", "total": 50000, "paid": 0, "pending": 50000, "scholarship": 0 }
+      ]
+    },
+    "attendance": {
+      "totalClasses": 180,
+      "presentCount": 156,
+      "grossPercentage": 86.7,
+      "examStatus": "Eligible (≥ 80%)",
+      "courses": [
+        { "code": "BCA101", "title": "Computer Fundamentals", "type": "LECTURE", "present": 28, "total": 32, "percentage": 87.5 },
+        { "code": "BCA102", "title": "Programming in C", "type": "LAB", "present": 18, "total": 20, "percentage": 90.0 },
+        { "code": "BCA103", "title": "Database Management", "type": "LECTURE", "present": 25, "total": 30, "percentage": 83.3 }
+      ]
+    },
+    "result": {
+      "cumulativeCGPA": 8.90,
+      "creditsEarned": "26.0 / 26.0",
+      "semestersCompleted": "1 of 6",
+      "classification": "First Class",
+      "records": [
+        { "semester": "Semester 1", "session": "December 2025", "registeredCredits": "13.0", "earnedCredits": "13.0", "sgpa": "8.80", "status": "Passed" },
+        { "semester": "Semester 2", "session": "May 2026", "registeredCredits": "13.0", "earnedCredits": "—", "sgpa": "In Progress", "status": "Term Active" }
+      ]
+    }
+  },
+  {
+    "id": "25DCE030",
+    "password": "25DCE030@123",
+    "name": "Pal Ghori",
+    "course": "B.Tech Computer Science",
+    "degree": "B.Tech CSE",
+    "institute": "DEPSTAR",
+    "semester": 3,
+    "cgpa": 10.00,
+    "email": "25dce030@charusat.edu.in",
+    "city": "Surat",
+    "birthDate": "2007-01-12",
+    "birthPlace": "Surat",
+    "gender": "Male",
+    "status": "Active",
+    "father": {
+      "name": "Rakeshbhai T. Ghori",
+      "mobile": "9876534567",
+      "occupation": "CEO, google"
+    },
+    "mother": {
+      "name": "Sonal N. Ghori",
+      "mobile": "9876536789",
+      "occupation": "Teacher"
+    },
+    "hostel": {
+      "name": "CHARUSAT Campus Hostel Block A",
+      "address": "CHARUSAT Campus, Changa - 388421",
+      "contact": "9876543210",
+      "type": "College Hostel",
+      "roomNumber": "A-110",
+      "roomType": "Single Sharing",
+      "ownerName": "Nitinbhai J. Ghori",
+      "ownerMobile": "9876532145",
+      "wardenName": "Sonalben Patel",
+      "wardenMobile": "9876539876",
+      "monthlyFees": 7000,
+      "messIncluded": true,
+      "facilities": ["Wi-Fi", "Laundry", "Study Hall", "24/7 Security"]
+    },
+    "payment": {
+      "totalAcademicFees": 390000,
+      "feesPaid": 310000,
+      "pendingDues": 80000,
+      "scholarshipReceived": 75000,
+      "semesters": [
+        { "name": "Semester 1", "total": 65000, "paid": 65000, "pending": 0, "scholarship": 20000 },
+        { "name": "Semester 2", "total": 65000, "paid": 65000, "pending": 0, "scholarship": 20000 },
+        { "name": "Semester 3", "total": 65000, "paid": 65000, "pending": 0, "scholarship": 35000 },
+        { "name": "Semester 4", "total": 65000, "paid": 0, "pending": 65000, "scholarship": 0 },
+        { "name": "Semester 5", "total": 65000, "paid": 0, "pending": 65000, "scholarship": 0 }
+      ]
+    },
+    "attendance": {
+      "totalClasses": 210,
+      "presentCount": 197,
+      "grossPercentage": 93.8,
+      "examStatus": "Eligible (≥ 80%)",
+      "courses": [
+        { "code": "CEUE203", "title": "Object Oriented Programming", "type": "LECTURE", "present": 31, "total": 34, "percentage": 91.2 },
+        { "code": "CSUC201", "title": "Fundamentals of Data Structures", "type": "LECTURE", "present": 35, "total": 38, "percentage": 92.1 },
+        { "code": "ITUC201", "title": "Fundamentals of Computer Networks", "type": "LECTURE", "present": 29, "total": 32, "percentage": 90.6 },
+        { "code": "ITUE203", "title": "Web Development Frameworks", "type": "LAB", "present": 17, "total": 18, "percentage": 94.4 }
+      ]
+    },
+    "result": {
+      "cumulativeCGPA": 10.00,
+      "creditsEarned": "69.0 / 69.0",
+      "semestersCompleted": "2 of 8",
+      "classification": "Outstanding",
+      "records": [
+        { "semester": "Semester 1", "session": "December 2025", "registeredCredits": "23.0", "earnedCredits": "23.0", "sgpa": "9.90", "status": "Passed (Distinction)" },
+        { "semester": "Semester 2", "session": "May 2026", "registeredCredits": "23.0", "earnedCredits": "—", "sgpa": "In Progress", "status": "Term Active" }
+      ]
+    }
   }
 ]
