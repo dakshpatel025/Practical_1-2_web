@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Family Details | StudentHub Portal</title>
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/family_style.css">
+</head>
+<body>
+    <a href="#main" class="skip-link">Skip to Content</a>
+    <header id="text">
+        <a class="brand" href="../index.html">
+            <img src="../image/charusat_logo.png" alt="CHARUSAT logo">
+            <span>Student Hub Portal</span>
+        </a>
+    </header>
+    <div id="space"></div>
+    <div id="nav">
+        <nav aria-label="Main navigation">
+            <a href="../index.html" class="input">Home</a>
+            <a href="main_page.html" class="input">Profile</a>
+            <a href="family.html" class="input active">Family detail</a>
+            <a href="semester_result.html" class="input">Semester result</a>
+            <a href="Student_attendance.html" class="input">Attendance</a>
+            <a href="Student_hostel.html" class="input">Student hostel</a>
+            <a href="Student_Payment.html" class="input">Payment detail</a>
+            <a href="Student_time-table.html" class="input">Time - table</a>
+            <a href="course_details.html" class="input">Course</a>
+            <a href="events.html" class="input">Events</a>
+            <a href="faq.html" class="input">FAQ</a>
+            <a href="register.html" class="input">Register</a>
+            <a href="feedback.html" class="input">Feedback</a>
+        </nav>
+    </div>
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="../index.html">Home</a> / Family Details
+    </nav>
+    <main id="main">
+        <div class="family-container">
+            <h1 id="title" style="margin-bottom: 25px;">
+                Parent & Family Information
+            </h1>
+            <div class="family-box">
+                <div class="box-heading">
+                    <h2>Father Details</h2>
+                </div>
+                <div class="details-content">
+                    <div class="form-area">
+                        <label>Father Name <span class="required">*</span></label>
+                        <div class="name-inputs">
+                            <input type="text" id="fatherFirstName" placeholder="First name" class="input_details" value="Kamleshbhai" required>
+                            <input type="text" id="fatherMiddleName" placeholder="Middle name" class="input_details" value="M.">
+                            <input type="text" id="fatherLastName" placeholder="Last name" class="input_details" value="Patel" required>
+                        </div>
+                        <label>Father Mobile <span class="required">*</span></label>
+                        <input type="tel" id="fatherMobile" class="mobile input_details" placeholder="Mobile number" value="9825012345" maxlength="10" required>
+                        <label>Father Occupation</label>
+                        <input type="text" id="fatherOccupation" class="occupation input_details" placeholder="Occupation" value="Business">
+                    </div>
+                    <div class="photo-area">
+                        <label>Father Photo</label>
+                        <div class="photo-box">
+                            <span id="fatherText">No Photo</span>
+                            <img id="fatherPreview" class="photo-preview" alt="Father Photo">
+                        </div>
+                        <input type="file" id="fatherPhoto" accept="image/*" class="input_details" hidden>
+                        <button type="button" onclick="document.getElementById('fatherPhoto').click()">
+                            Choose Photo
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="family-box">
+                <div class="box-heading">
+                    <h2>Mother Details</h2>
+                </div>
+                <div class="details-content">
+                    <div class="form-area">
+                        <label>Mother Name <span class="required">*</span></label>
+                        <div class="name-inputs">
+                            <input type="text" id="motherFirstName" placeholder="First name" class="input_details" value="Bhavnaben" required>
+                            <input type="text" id="motherMiddleName" placeholder="Middle name" class="input_details" value="K.">
+                            <input type="text" id="motherLastName" placeholder="Last name" class="input_details" value="Patel" required>
+                        </div>
+                        <label>Mother Mobile <span class="required">*</span></label>
+                        <input type="tel" id="motherMobile" class="mobile input_details" placeholder="Mobile number" value="9825067890" maxlength="10" required>
+                        <label>Mother Occupation</label>
+                        <input type="text" id="motherOccupation" class="occupation input_details" placeholder="Occupation" value="Homemaker">
+                    </div>
+                    <div class="photo-area">
+                        <label>Mother Photo</label>
+                        <div class="photo-box">
+                            <span id="motherText">No Photo</span>
+                            <img id="motherPreview" class="photo-preview" alt="Mother Photo">
+                        </div>
+                        <input type="file" id="motherPhoto" accept="image/*" class="input_details" hidden>
+                        <button type="button" onclick="document.getElementById('motherPhoto').click()">
+                            Choose Photo
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="family-actions">
+                <button type="button" class="btn btn-primary" onclick="alert('✅ Family details saved successfully!')" style="font-size: 15px; padding: 10px 32px;">
+                    Save Family Details
+                </button>
+            </div>
+        </div>
+    </main>
+    <footer class="fot">
+        <p>CHARUSAT University © 2018 - 2026. All Rights Reserved. | <a href="feedback.html">Feedback & Support</a></p>
+    </footer>
+    <script src="../js/Family_page.js"></script>
+    <script src="../js/student_session.js"></script>
+</body>
+</html>

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudentHub Portal | CHARUSAT University</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/home.css">
+</head>
+<body>
+    <a href="#main" class="skip-link">Skip to Content</a>
+    <div id="noticeBanner" role="status" aria-live="polite"
+        style="background-color: var(--warning-bg); color: var(--warning); border-bottom: 1px solid rgba(245, 158, 11, 0.3); padding: 10px 20px; font-weight: 600; font-size: 14px; display: flex; justify-content: space-between; align-items: center;">
+        <span>📢 <strong>Notice:</strong> Semester 4 examination forms and Cognizance Tech Fest 2026 registrations are
+            live!</span>
+        <button
+            style="background: none; border: none; font-size: 16px; font-weight: bold; cursor: pointer; color: var(--warning);"
+            id="noticeClose" aria-label="Dismiss Notification">✕</button>
+    </div>
+    <header id="text">
+        <a class="brand" href="index.html">
+            <img src="image/charusat_logo.png" alt="CHARUSAT logo">
+            <span>Student Hub Portal</span>
+        </a>
+    </header>
+    <div id="space"></div>
+    <div id="nav">
+        <nav aria-label="Main navigation">
+            <a href="index.html" class="input active">Home</a>
+            <a href="html/main_page.html" class="input">Profile</a>
+            <a href="html/family.html" class="input">Family detail</a>
+            <a href="html/course_details.html" class="input">Course</a>
+            <a href="html/Student_attendance.html" class="input">Attendance</a>
+            <a href="html/Student_hostel.html" class="input">Student hostel</a>
+            <a href="html/Student_Payment.html" class="input">Payment detail</a>
+            <a href="html/Student_time-table.html" class="input">Time - table</a>
+            <a href="html/semester_result.html" class="input">Semester result</a>
+            <a href="html/events.html" class="input">Events</a>
+            <a href="html/faq.html" class="input">FAQ</a>
+            <a href="html/register.html" class="input">Register</a>
+            <a href="html/event_register.html" class="input">Event Form</a>
+            <a href="html/feedback.html" class="input">Feedback</a>
+            <a href="html/login.html" class="input login-link">Sign In</a>
+        </nav>
+    </div>
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+        <span aria-current="page">Home / Student Dashboard</span>
+    </nav>
+    <main id="main">
+        <section class="slider-box" aria-live="polite" aria-atomic="true">
+            <h2 id="slideTitle">Welcome to StudentHub Portal</h2>
+            <p id="slideDesc">Access student profile, verify registered courses, check daily lecture attendance, and
+                view examination results.</p>
+            <div class="slider-controls">
+                <button type="button" id="previousSlide" class="btn btn-primary">&lt;
+                    Previous</button>
+                <button type="button" id="nextSlide" class="btn btn-primary">Next
+                    &gt;</button>
+            </div>
+        </section>
+        <div class="stats-row">
+            <div class="stat-card">
+                <h3>Attendance</h3>
+                <div class="val success-text">86.4%</div>
+            </div>
+            <div class="stat-card">
+                <h3>Cumulative CGPA</h3>
+                <div class="val">9.42</div>
+            </div>
+            <div class="stat-card">
+                <h3>Enrolled Courses</h3>
+                <div class="val">6 Subjects</div>
+            </div>
+            <div class="stat-card">
+                <h3>Fees Status</h3>
+                <div class="val success-text">Paid</div>
+            </div>
+        </div>
+        <h1 id="title">
+            Student Portal Modules
+        </h1>
+        <div class="modules-container">
+            <div class="module-box">
+                <h3>Student Profile</h3>
+                <p>View general student information, admission details, and uploaded student photo.</p>
+                <a href="html/main_page.html">View Profile &rarr;</a>
+            </div>
+            <div class="module-box">
+                <h3>Family Details</h3>
+                <p>Parent contact information, emergency numbers, and parent photo records.</p>
+                <a href="html/family.html">View Family &rarr;</a>
+            </div>
+            <div class="module-box">
+                <h3>Course Details</h3>
+                <p>Current semester registered regular courses, course credits, and elective selection.</p>
+                <a href="html/course_details.html">View Courses &rarr;</a>
+            </div>
+            <div class="module-box">
+                <h3>Attendance Tracking</h3>
+                <p>Check subject-wise lecture and lab attendance percentages and exam eligibility.</p>
+                <a href="html/Student_attendance.html">Check Attendance &rarr;</a>
+            </div>
+            <div class="module-box">
+                <h3>Hostel Details</h3>
+                <p>Hostel accommodations, room sharing options, owner and warden contact numbers.</p>
+                <a href="html/Student_hostel.html">View Hostel &rarr;</a>
+            </div>
+            <div class="module-box">
+                <h3>Payment Details</h3>
+                <p>Semester tuition fees, received amount, pending dues, and scholarship records.</p>
+                <a href="html/Student_Payment.html">View Payment &rarr;</a>
+            </div>
+            <div class="module-box">
+                <h3>Time - Table</h3>
+                <p>Daily lecture schedule, lab slots, faculty details, and attendance status.</p>
+                <a href="html/Student_time-table.html">View Timetable &rarr;</a>
+            </div>
+            <div class="module-box">
+                <h3>Semester Result</h3>
+                <p>Semester credits earned, SGPA, and cumulative CGPA academic records.</p>
+                <a href="html/semester_result.html">View Result &rarr;</a>
+            </div>
+            <div class="module-box">
+                <h3>Events & Hackathons</h3>
+                <p>Fetch API dynamic campus events with search filter, sorting, and pagination.</p>
+                <a href="html/events.html">View Events &rarr;</a>
+            </div>
+            <div class="module-box">
+                <h3>FAQ Helpdesk</h3>
+                <p>Collapsible accordion FAQ answering academic, hostel, and exam questions.</p>
+                <a href="html/faq.html">View FAQ &rarr;</a>
+            </div>
+            <div class="module-box">
+                <h3>Student Registration</h3>
+                <p>RegEx validation, Canvas CAPTCHA, PHP server-side validation, and CSV + JSON storage.</p>
+                <a href="html/register.html">Register Form &rarr;</a>
+            </div>
+            <div class="module-box">
+                <h3>Event Registration</h3>
+                <p>PHP POST form for campus event seat booking with duplicate-check and live seat count updates.</p>
+                <a href="html/event_register.html">Event Form &rarr;</a>
+            </div>
+            <div class="module-box">
+                <h3>Feedback Form</h3>
+                <p>Submit suggestions and ratings for campus facilities and student support.</p>
+                <a href="html/feedback.html">Give Feedback &rarr;</a>
+            </div>
+        </div>
+    </main>
+    <footer class="fot">
+        <p>CHARUSAT University © 2018 - 2026. All Rights Reserved. | <a href="html/feedback.html">Feedback & Support</a>
+        </p>
+    </footer>
+    <script src="js/home.js"></script>
+    <script src="js/theme_nav.js"></script>
+</body>
+</html>

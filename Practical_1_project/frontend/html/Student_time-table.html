@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academic Time Table | StudentHub Portal</title>
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/time_table.css">
+</head>
+<body>
+    <a href="#main" class="skip-link">Skip to Content</a>
+    <header id="text">
+        <a class="brand" href="../index.html">
+            <img src="../image/charusat_logo.png" alt="CHARUSAT logo">
+            <span>Student Hub Portal</span>
+        </a>
+    </header>
+    <div id="space"></div>
+    <div id="nav">
+        <nav aria-label="Main navigation">
+            <a href="../index.html" class="input">Home</a>
+            <a href="main_page.html" class="input">Profile</a>
+            <a href="family.html" class="input">Family detail</a>
+            <a href="semester_result.html" class="input">Semester result</a>
+            <a href="Student_attendance.html" class="input">Attendance</a>
+            <a href="Student_hostel.html" class="input">Student hostel</a>
+            <a href="Student_Payment.html" class="input">Payment detail</a>
+            <a href="Student_time-table.html" class="input active">Time - table</a>
+            <a href="course_details.html" class="input">Course</a>
+            <a href="events.html" class="input">Events</a>
+            <a href="faq.html" class="input">FAQ</a>
+            <a href="register.html" class="input">Register</a>
+            <a href="feedback.html" class="input">Feedback</a>
+        </nav>
+    </div>
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="../index.html">Home</a> / Academic Time Table
+    </nav>
+    <main id="main">
+        <div class="timetable-wrapper">
+            <h1 id="title" style="margin-bottom: 8px;">
+                Daily Class Schedule & Attendance Status
+            </h1>
+            <p style="text-align: center; color: var(--text-secondary); font-size: 14px; margin-top: 0; margin-bottom: 25px;">
+                Semester 4 - B.Tech Computer Science & Engineering (Division A)
+            </p>
+            <div class="timetable-controls-card">
+                <div class="date-picker-group">
+                    <label for="scheduleDate">Select Date:</label>
+                    <input type="date" id="scheduleDate" value="2026-09-18">
+                </div>
+                <div class="day-tabs-row" role="tablist" aria-label="Select Day">
+                    <button type="button" class="day-tab-btn" data-day="Mon">Mon</button>
+                    <button type="button" class="day-tab-btn" data-day="Tue">Tue</button>
+                    <button type="button" class="day-tab-btn" data-day="Wed">Wed</button>
+                    <button type="button" class="day-tab-btn" data-day="Thu">Thu</button>
+                    <button type="button" class="day-tab-btn active" data-day="Fri">Fri (Today)</button>
+                </div>
+            </div>
+            <div class="timetable-card">
+                <div class="timetable-card-header">
+                    <h3 id="currentDayScheduleTitle">Schedule for Friday, 18 September 2026</h3>
+                    <span style="font-size: 13px; color: var(--text-secondary);">Building: DEPSTAR Block 3</span>
+                </div>
+                <div class="table-wrap" style="width: 100%; border: none; border-radius: 4px; box-shadow: none;">
+                    <table class="commen-table">
+                        <thead>
+                            <tr>
+                                <th>Time Slot</th>
+                                <th>Course Title</th>
+                                <th>Class Type / Venue</th>
+                                <th>Faculty In-Charge</th>
+                                <th>Attendance Status</th>
+                            </tr>
+                        </thead>
+                        <tbody id="timetableBody"></tbody>
+                    </table>
+                </div>
+                <div class="timetable-legend">
+                    <div class="legend-item">
+                        <span class="badge badge-success">P</span> = Present
+                    </div>
+                    <div class="legend-item">
+                        <span class="badge badge-danger">A</span> = Absent
+                    </div>
+                    <div class="legend-item">
+                        <span class="badge badge-warning">NT</span> = Class Not Taken / Postponed
+                    </div>
+                    <div class="legend-item" style="margin-left: auto;">
+                        Total Lectures Scheduled: <strong id="totalSessionsLabel">6 Sessions</strong>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="fot">
+        <p>CHARUSAT University © 2018 - 2026. All Rights Reserved. | <a href="feedback.html">Feedback & Support</a></p>
+    </footer>
+    <script src="../js/theme_nav.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', async function () {
+            const dayTabs = document.querySelectorAll('.day-tab-btn');
+            const timetableBody = document.getElementById('timetableBody');
+            const title = document.getElementById('currentDayScheduleTitle');
+            const scheduleDateInput = document.getElementById('scheduleDate');
+            const totalSessionsLabel = document.getElementById('totalSessionsLabel');
+
+            let timetableData = {};
+            const dayOrder = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri'];
+
+            function getStatusBadge(status) {
+                const lower = (status || '').toLowerCase();
+                if (lower.includes('present')) return '<span class="badge badge-success">Present (P)</span>';
+                if (lower.includes('absent')) return '<span class="badge badge-danger">Absent (A)</span>';
+                if (lower.includes('not taken') || lower.includes('postponed')) return '<span class="badge badge-warning">Not Taken (NT)</span>';
+                if (lower.includes('break')) return '<span class="badge badge-secondary">Break</span>';
+                return '<span class="badge badge-info">' + status + '</span>';
+            }
+
+            function getClassBadge(type) {
+                const lower = (type || '').toLowerCase();
+                if (lower === 'lab') return '<span class="badge badge-warning">Lab</span>';
+                if (lower === 'break') return '<span class="badge badge-secondary">Break</span>';
+                return '<span class="badge badge-info">Lecture</span>';
+            }
+
+            function formatDateLabel(dateStr) {
+                if (!dateStr) return 'Regular Weekly Slot';
+                const date = new Date(dateStr + 'T00:00:00');
+                return date.toLocaleDateString('en-GB', {
+                    day: 'numeric',
+                    month: 'short',
+                    year: 'numeric'
+                });
+            }
+
+            function renderSchedule(dayKey) {
+                const dayData = timetableData[dayKey];
+                if (!dayData || !Array.isArray(dayData.sessions)) {
+                    timetableBody.innerHTML = '<tr><td colspan="5" style="text-align:center;">No timetable available.</td></tr>';
+                    return;
+                }
+
+                timetableBody.innerHTML = dayData.sessions.map(session => {
+                    if (session.courseCode === 'BREAK') {
+                        return `
+                            <tr>
+                                <td><strong>${session.time}</strong></td>
+                                <td colspan="4" style="text-align: center;">${session.courseName}</td>
+                            </tr>
+                        `;
+                    }
+
+                    return `
+                        <tr>
+                            <td><strong>${session.time}</strong></td>
+                            <td><strong>${session.courseCode}</strong> - ${session.courseName}</td>
+                            <td>${getClassBadge(session.type)} &nbsp; ${session.venue}</td>
+                            <td>${session.faculty}</td>
+                            <td>${getStatusBadge(session.status)}</td>
+                        </tr>
+                    `;
+                }).join('');
+
+                const sessionCount = dayData.sessions.filter(s => s.courseCode !== 'BREAK').length;
+                totalSessionsLabel.textContent = `${sessionCount} Sessions`;
+
+                if (title) {
+                    title.textContent = `Schedule for ${dayData.label}, ${formatDateLabel(dayData.date)}`;
+                }
+
+                if (scheduleDateInput) {
+                    scheduleDateInput.value = dayData.date || '2026-09-18';
+                }
+            }
+
+            try {
+                const response = await fetch('../../database/data/timetable.json');
+                if (!response.ok) throw new Error('JSON not found');
+                timetableData = await response.json();
+
+                const activeDay = dayOrder.includes('Fri') ? 'Fri' : dayOrder[0];
+                dayTabs.forEach(tab => {
+                    tab.addEventListener('click', function () {
+                        dayTabs.forEach(t => t.classList.remove('active'));
+                        this.classList.add('active');
+                        const selectedDay = this.getAttribute('data-day');
+                        renderSchedule(selectedDay);
+                    });
+                });
+
+                dayTabs.forEach(tab => {
+                    if (tab.getAttribute('data-day') === activeDay) {
+                        tab.classList.add('active');
+                    }
+                });
+
+                renderSchedule(activeDay);
+            } catch (error) {
+                timetableBody.innerHTML = '<tr><td colspan="5" style="text-align:center;">Unable to load timetable data.</td></tr>';
+                if (title) {
+                    title.textContent = 'Schedule unavailable';
+                }
+                console.error('Timetable load failed:', error);
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,3 @@
+<FilesMatch "^(students\.json|students_registered\.csv|feedback_submissions\.json|feedback_submissions\.csv)$">
+    Require all denied
+</FilesMatch>

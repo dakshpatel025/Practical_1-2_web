@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Registration | StudentHub Portal</title>
+    <meta name="description" content="Register for campus events with real-time seat availability.">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/event_register.css">
+</head>
+<body>
+    <a href="#main" class="skip-link">Skip to Content</a>
+
+    <header id="text">
+        <a class="brand" href="../index.html">
+            <img src="../image/charusat_logo.png" alt="CHARUSAT logo">
+            <span>Student Hub Portal</span>
+        </a>
+    </header>
+    <div id="space"></div>
+    <div id="nav">
+        <nav aria-label="Main navigation">
+            <a href="../index.html" class="input">Home</a>
+            <a href="main_page.html" class="input">Profile</a>
+            <a href="family.html" class="input">Family detail</a>
+            <a href="semester_result.html" class="input">Semester result</a>
+            <a href="Student_attendance.html" class="input">Attendance</a>
+            <a href="Student_hostel.html" class="input">Student hostel</a>
+            <a href="Student_Payment.html" class="input">Payment detail</a>
+            <a href="Student_time-table.html" class="input">Time - table</a>
+            <a href="course_details.html" class="input">Course</a>
+            <a href="events.html" class="input">Events</a>
+            <a href="faq.html" class="input">FAQ</a>
+            <a href="register.html" class="input">Register</a>
+            <a href="event_register.html" class="input active">Event Form</a>
+            <a href="feedback.html" class="input">Feedback</a>
+        </nav>
+    </div>
+
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="../index.html">Home</a> /
+        <a href="events.html">Events</a> / Event Registration
+    </nav>
+
+    <main id="main">
+        <div class="ev-wrapper">
+            <h1 id="title" style="margin-bottom:6px;">Campus Event Registration</h1>
+            <p style="text-align:center;color:var(--text-secondary);font-size:14px;margin:0 0 28px;">
+                Register for campus events and reserve your seat.
+            </p>
+
+            <!-- Step 1: Event Selection -->
+            <div class="form-card" style="margin-bottom:24px;">
+                <div class="practical-badge">🎟️ Step 1 — Select an Event</div>
+                <h2>Choose Your Event</h2>
+                <p class="subtitle">Select one available event below. Fully booked events are disabled.</p>
+                <div class="event-selector-grid" id="eventGrid">
+                    <div class="empty-state">Loading events...</div>
+                </div>
+                <div class="field-err" id="errEventSelect" style="font-size:13px;"></div>
+            </div>
+
+            <!-- Step 2: Registration Form -->
+            <div class="form-card">
+                <div class="practical-badge">📝 Step 2 — Fill Registration Form</div>
+                <h2>Participant Details</h2>
+                <p class="subtitle">Enter your details to complete your event registration.</p>
+
+                <!-- Selected event info panel -->
+                <div class="selected-event-panel" id="selectedEventPanel">
+                    Registering for: <strong id="selectedEventName">—</strong> &nbsp;|&nbsp;
+                    📅 <span id="selectedEventDate">—</span> &nbsp;|&nbsp;
+                    🎟️ Seats left: <strong id="selectedEventSeats">—</strong>
+                </div>
+
+                <div id="serverErrorBanner" class="server-error" role="alert" aria-live="assertive"></div>
+                <div id="serverSuccessBanner" class="server-success" role="status" aria-live="polite"></div>
+
+                <form id="eventRegForm" novalidate autocomplete="off">
+                    <input type="hidden" name="event_id" id="hiddenEventId">
+
+                    <div class="section-label">👤 Participant Information</div>
+
+                    <div class="form-row-2">
+                        <div class="form-group">
+                            <label for="evName">Full Name <span class="req">*</span></label>
+                            <input type="text" id="evName" name="participant_name" class="form-control"
+                                   placeholder="e.g. Daksh Patel" maxlength="60">
+                            <div class="field-err" id="errEvName"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="evEmail">Email Address <span class="req">*</span></label>
+                            <input type="email" id="evEmail" name="participant_email" class="form-control"
+                                   placeholder="student@charusat.edu.in">
+                            <div class="field-err" id="errEvEmail"></div>
+                        </div>
+                    </div>
+
+                    <div class="form-row-2">
+                        <div class="form-group">
+                            <label for="evMobile">Mobile Number <span class="req">*</span></label>
+                            <input type="tel" id="evMobile" name="participant_mobile" class="form-control"
+                                   placeholder="10-digit number" maxlength="10">
+                            <div class="field-err" id="errEvMobile"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="evStudentId">Student ID <span class="req">*</span></label>
+                            <input type="text" id="evStudentId" name="student_id" class="form-control"
+                                   placeholder="e.g. 24DCS001" maxlength="15">
+                            <div class="field-err" id="errEvStudentId"></div>
+                        </div>
+                    </div>
+
+                    <div class="section-label">🎓 Academic Details</div>
+
+                    <div class="form-row-2">
+                        <div class="form-group">
+                            <label for="evDept">Department <span class="req">*</span></label>
+                            <select id="evDept" name="department" class="form-control">
+                                <option value="">-- Select Department --</option>
+                                <option value="CSE">CSE</option>
+                                <option value="IT">IT</option>
+                                <option value="EC">Electronics &amp; Comm.</option>
+                                <option value="ME">Mechanical</option>
+                                <option value="CE">Civil</option>
+                                <option value="BCA">BCA</option>
+                                <option value="BBA">BBA</option>
+                                <option value="BSc.IT">BSc.IT</option>
+                                <option value="Other">Other</option>
+                            </select>
+                            <div class="field-err" id="errEvDept"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="evYearStudy">Year of Study <span class="req">*</span></label>
+                            <select id="evYearStudy" name="year_of_study" class="form-control">
+                                <option value="">-- Select Year --</option>
+                                <option value="1st Year">1st Year</option>
+                                <option value="2nd Year">2nd Year</option>
+                                <option value="3rd Year">3rd Year</option>
+                                <option value="4th Year">4th Year</option>
+                                <option value="PG 1st Year">PG 1st Year</option>
+                                <option value="PG 2nd Year">PG 2nd Year</option>
+                            </select>
+                            <div class="field-err" id="errEvYear"></div>
+                        </div>
+                    </div>
+
+                    <div class="section-label">📦 Additional Options</div>
+
+                    <div class="form-row-2">
+                        <div class="form-group">
+                            <label for="evTshirt">T-Shirt Size (if provided)</label>
+                            <select id="evTshirt" name="t_shirt_size" class="form-control">
+                                <option value="NA">Not Applicable</option>
+                                <option value="XS">XS</option>
+                                <option value="S">S</option>
+                                <option value="M">M</option>
+                                <option value="L">L</option>
+                                <option value="XL">XL</option>
+                                <option value="XXL">XXL</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="evNote">Special Note / Dietary / Accessibility</label>
+                            <textarea id="evNote" name="special_note" class="form-control"
+                                      rows="3" maxlength="300"
+                                      placeholder="Any special requirements (max 300 chars)..."></textarea>
+                            <div class="field-err" id="errEvNote"></div>
+                        </div>
+                    </div>
+
+                    <!-- Terms -->
+                    <div class="form-group">
+                        <label style="display:inline-flex;align-items:flex-start;gap:8px;font-weight:400;font-size:13.5px;cursor:pointer;">
+                            <input type="checkbox" name="terms" id="evTerms"
+                                   style="width:17px;height:17px;margin-top:2px;cursor:pointer;">
+                            I agree to the event participation terms, code of conduct, and photography consent.
+                        </label>
+                        <div class="field-err" id="errEvTerms"></div>
+                    </div>
+
+                    <div class="submit-row">
+                        <button type="reset" class="btn btn-secondary" id="evResetBtn">Reset</button>
+                        <button type="submit" class="btn btn-primary" id="evSubmitBtn">
+                            Register for Event →
+                        </button>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="fot">
+        <p>CHARUSAT University &copy; 2018 - 2026. All Rights Reserved. |
+           <a href="feedback.html">Feedback &amp; Support</a></p>
+    </footer>
+
+    <script src="../js/event_register.js"></script>
+
+    <script src="../js/theme_nav.js"></script>
+</body>
+</html>

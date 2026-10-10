@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback & Support | StudentHub Portal</title>
+    <link rel="stylesheet" href="../css/common.css">
+    <style>
+        .feedback-wrapper {
+            max-width: 780px;
+            margin: 20px auto 40px;
+            padding: 0 15px;
+        }
+        .star-rating-wrap {
+            display: flex;
+            gap: 8px;
+            font-size: 32px;
+            cursor: pointer;
+            color: #cbd5e1;
+            margin-top: 6px;
+            user-select: none;
+        }
+        .star-item {
+            padding: 0 2px;
+            border: 0;
+            background: transparent;
+            color: inherit;
+            font: inherit;
+            transition: color 0.2s ease, transform 0.1s ease;
+        }
+        .star-item:hover {
+            transform: scale(1.15);
+        }
+        .char-counter {
+            font-size: 12px;
+            color: var(--text-secondary);
+            text-align: right;
+            margin-top: 6px;
+        }
+        #feedbackStatus:not(:empty) {
+            margin-bottom: 16px;
+            padding: 12px 14px;
+            border-radius: var(--radius-sm);
+            color: var(--danger);
+            background: var(--danger-bg);
+        }
+    </style>
+</head>
+<body>
+    <a href="#main" class="skip-link">Skip to Content</a>
+    <header id="text">
+        <a class="brand" href="../index.html">
+            <img src="../image/charusat_logo.png" alt="CHARUSAT logo">
+            <span>Student Hub Portal</span>
+        </a>
+    </header>
+    <div id="space"></div>
+    <div id="nav">
+        <nav aria-label="Main navigation">
+            <a href="../index.html" class="input">Home</a>
+            <a href="main_page.html" class="input">Profile</a>
+            <a href="family.html" class="input">Family detail</a>
+            <a href="semester_result.html" class="input">Semester result</a>
+            <a href="Student_attendance.html" class="input">Attendance</a>
+            <a href="Student_hostel.html" class="input">Student hostel</a>
+            <a href="Student_Payment.html" class="input">Payment detail</a>
+            <a href="Student_time-table.html" class="input">Time - table</a>
+            <a href="course_details.html" class="input">Course</a>
+            <a href="events.html" class="input">Events</a>
+            <a href="faq.html" class="input">FAQ</a>
+            <a href="register.html" class="input">Register</a>
+            <a href="feedback.html" class="input active">Feedback</a>
+        </nav>
+    </div>
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="../index.html">Home</a> / Feedback & Support
+    </nav>
+    <main id="main">
+        <div class="feedback-wrapper">
+            <h1 id="title" style="margin-bottom: 8px;">
+                Student Feedback & Campus Support
+            </h1>
+            <p style="text-align: center; color: var(--text-secondary); font-size: 14px; margin-top: 0; margin-bottom: 25px;">
+                Share your feedback, suggestions, and queries to help us improve campus facilities and student services.
+            </p>
+            <section class="portal-card" aria-label="Student Feedback Form">
+                <div id="feedbackStatus" role="status" aria-live="polite"></div>
+                <form id="feedbackForm" method="post">
+                    <div class="form-group">
+                        <label for="fbStudentId" class="form-label">Student ID / Enrollment Number *</label>
+                        <input type="text" id="fbStudentId" name="student_id" class="form-control" placeholder="e.g. 24DCS001" pattern="[A-Za-z0-9]{5,20}" maxlength="20" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="fbCategory" class="form-label">Feedback Area / Category *</label>
+                        <select id="fbCategory" name="category" class="form-control" required>
+                            <option value="">-- Select Feedback Category --</option>
+                            <option value="Academic">Academic Curriculum & Faculty Delivery</option>
+                            <option value="Hostel">Hostel Living & Mess Amenities</option>
+                            <option value="Transport">Campus Bus & Transportation</option>
+                            <option value="Canteen">Campus Food Courts & Canteen</option>
+                            <option value="Laboratory">Computing Labs & Hardware Infrastructure</option>
+                            <option value="Library">Central Knowledge Resource & Library</option>
+                            <option value="Portal">StudentHub Web Portal UI & Usability</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Satisfaction Rating *</label>
+                        <div class="star-rating-wrap" id="starRating" role="radiogroup" aria-label="Star rating out of 5">
+                            <button class="star-item" type="button" role="radio" aria-label="1 star" aria-checked="false" data-value="1">★</button>
+                            <button class="star-item" type="button" role="radio" aria-label="2 stars" aria-checked="false" data-value="2">★</button>
+                            <button class="star-item" type="button" role="radio" aria-label="3 stars" aria-checked="false" data-value="3">★</button>
+                            <button class="star-item" type="button" role="radio" aria-label="4 stars" aria-checked="false" data-value="4">★</button>
+                            <button class="star-item" type="button" role="radio" aria-label="5 stars" aria-checked="true" data-value="5">★</button>
+                        </div>
+                        <input type="hidden" id="ratingValue" name="rating" value="5">
+                    </div>
+                    <div class="form-group">
+                        <label for="fbComments" class="form-label">Your Feedback / Suggestions *</label>
+                        <textarea id="fbComments"
+                                  class="form-control"
+                                  name="comments"
+                                  rows="5"
+                                  placeholder="Describe your feedback, suggestion, or query in detail..."
+                                  maxlength="500"
+                                  required></textarea>
+                        <div class="char-counter"><span id="charCount">0</span> / 500 characters</div>
+                    </div>
+                    <div style="display: flex; justify-content: flex-end; gap: 12px; margin-top: 20px;">
+                        <button type="reset" class="btn btn-secondary">Clear</button>
+                        <button id="feedbackSubmit" type="submit" class="btn btn-primary">Submit Feedback &rarr;</button>
+                    </div>
+                </form>
+            </section>
+        </div>
+    </main>
+    <div id="feedbackModal" class="modal-backdrop" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="fbModalTitle">
+        <div class="modal-box" style="text-align: center;">
+            <button class="modal-close-btn" aria-label="Close Modal">&times;</button>
+            <div style="font-size: 48px; color: var(--success); margin-bottom: 12px;">✅</div>
+            <h3 id="fbModalTitle" style="font-size: 22px; color: var(--text-primary); margin-bottom: 8px;">Feedback Submitted!</h3>
+            <p style="color: var(--text-secondary); font-size: 14px; margin-bottom: 20px;">Thank you for sharing your valuable input. The student welfare council and university coordinators will review your submission.</p>
+            <button class="btn btn-primary" type="button" onclick="window.StudentHub.closeModal('feedbackModal')">Done</button>
+        </div>
+    </div>
+    <footer class="fot">
+        <p>CHARUSAT University © 2018 - 2026. All Rights Reserved. | <a href="feedback.html">Feedback & Support</a></p>
+    </footer>
+    <script src="../js/theme_nav.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const stars = document.querySelectorAll('.star-item');
+            const ratingInput = document.getElementById('ratingValue');
+            const comments = document.getElementById('fbComments');
+            const charCount = document.getElementById('charCount');
+            const form = document.getElementById('feedbackForm');
+            const status = document.getElementById('feedbackStatus');
+            const submitButton = document.getElementById('feedbackSubmit');
+            let currentRating = 5;
+            highlightStars(currentRating);
+            stars.forEach(star => {
+                star.addEventListener('click', function () {
+                    currentRating = parseInt(this.getAttribute('data-value'), 10);
+                    ratingInput.value = currentRating;
+                    highlightStars(currentRating);
+                });
+                star.addEventListener('keydown', function (event) {
+                    if (!['ArrowLeft', 'ArrowRight', 'ArrowUp', 'ArrowDown'].includes(event.key)) return;
+                    event.preventDefault();
+                    const direction = ['ArrowRight', 'ArrowDown'].includes(event.key) ? 1 : -1;
+                    const nextRating = Math.max(1, Math.min(5, currentRating + direction));
+                    stars[nextRating - 1].focus();
+                    stars[nextRating - 1].click();
+                });
+            });
+            function highlightStars(count) {
+                stars.forEach((s, idx) => {
+                    s.style.color = (idx < count) ? '#f59e0b' : '#cbd5e1';
+                    s.setAttribute('aria-checked', String(idx + 1 === count));
+                });
+            }
+            comments.addEventListener('input', function () {
+                charCount.textContent = this.value.length;
+            });
+            form.addEventListener('submit', async function (e) {
+                e.preventDefault();
+                submitButton.disabled = true;
+                try {
+                    const response = await fetch('../../backend/api/feedback_process.php', {
+                        method: 'POST',
+                        body: new FormData(form)
+                    });
+                    const result = await response.json();
+                    if (!response.ok || !result.success) {
+                        status.textContent = result.message || 'Feedback could not be submitted.';
+                        status.setAttribute('role', 'alert');
+                        return;
+                    }
+                    status.textContent = '';
+                    status.setAttribute('role', 'status');
+                    if (window.StudentHub && window.StudentHub.openModal) {
+                        window.StudentHub.openModal('feedbackModal');
+                    }
+                    form.reset();
+                    charCount.textContent = '0';
+                    currentRating = 5;
+                    ratingInput.value = '5';
+                    highlightStars(5);
+                } catch (error) {
+                    console.error('Feedback submission failed:', error);
+                    status.textContent = 'Could not contact the support server. Please try again.';
+                    status.setAttribute('role', 'alert');
+                } finally {
+                    submitButton.disabled = false;
+                }
+            });
+        });
+    </script>
+</body>
+</html>
