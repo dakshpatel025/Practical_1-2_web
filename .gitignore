@@ -1,0 +1,34 @@
+﻿# =============================================
+# StudentHub Portal – .gitignore
+# =============================================
+
+# --- Sensitive database/data files ---
+# students.json contains student records (keep local only)
+database/data/students.json
+database/data/students_registered.csv
+database/data/feedback_submissions.json
+database/data/feedback_submissions.csv
+
+# --- Environment / Credentials ---
+.env
+*.env.local
+*.env.production
+
+# --- PHP vendor / composer ---
+vendor/
+composer.lock
+
+# --- Node.js ---
+node_modules/
+npm-debug.log*
+
+# --- OS / Editor ---
+.DS_Store
+Thumbs.db
+.vscode/settings.json
+*.swp
+*.swo
+
+# --- Build / temp ---
+*.zip
+*.log
